@@ -17,7 +17,7 @@ const Insert = () => {
     }
 
     const HandleSubmit=()=>{
-      let api = "http://localhost:3000/shop"
+      let api = "https://react-jsonserver.onrender.com/shop"
       axios.post(api,input).then((resp)=>{
       message.success("Product Succesfully save!!!");
       })
