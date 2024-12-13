@@ -1,0 +1,210 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Velowave M5",
+      "price": 2300,
+      "description": "Efficenecy meet style",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product11.jpg?v=1698312725&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product11.2.jpg?v=1698312739&width=533"
+    },
+    {
+      "id": "2",
+      "name": "sagway-Ninebot Z40x12",
+      "price": 2300,
+      "description": "urban Commuting Evolution",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533"
+    },
+    {
+      "id": "3",
+      "name": "Electric Scotter",
+      "price": 2300,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533"
+    }
+  ],
+  "shop": [
+    {
+      "id": "1",
+      "name": "AeroGlide X1",
+      "price": "87000000",
+      "description": "Efficenecy meet style",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product11.jpg?v=1698312725&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product11.2.jpg?v=1698312739&width=533"
+    },
+    {
+      "id": "2",
+      "name": "Aqua shine smart",
+      "price": 120000,
+      "description": "urban Commuting Evolution",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533"
+    },
+    {
+      "id": "3",
+      "name": "Glide Grip ",
+      "price": 57000,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533"
+    },
+    {
+      "id": "4",
+      "name": "Type torn V2",
+      "price": 23000,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product12.jpg?v=1698312943&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product12.2.jpg?v=1698312943&width=533"
+    },
+    {
+      "id": "5",
+      "name": "Levitron",
+      "price": 27500,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product2.jpg?v=1698244269&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product2.1.jpg?v=1698244298&width=533"
+    },
+    {
+      "id": "6",
+      "name": "Electric Scotter",
+      "price": 225800,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product3.jpg?v=1698311986&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product3.2.jpg?v=1698312004&width=533"
+    },
+    {
+      "id": "7",
+      "name": "NeoRide",
+      "price": 200000,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product4.jpg?v=1698312436&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product4.1.jpg?v=1698312446&width=533"
+    },
+    {
+      "id": "8",
+      "name": "Quantam Glide",
+      "price": 258900,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product5.jpg?v=1698327308&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product5.1.jpg?v=1698327308&width=533"
+    },
+    {
+      "id": "9",
+      "name": "Scooter Charger",
+      "price": 230000,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product8.jpg?v=1698329248&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product8.2.jpg?v=1698329248&width=533"
+    },
+    {
+      "id": "10",
+      "name": "Electric Scotter",
+      "price": 12300,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product10.1.jpg?v=1698661141&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product10.jpg?v=1698661141&width=533"
+    },
+    {
+      "id": "11",
+      "name": "Electric Scotter",
+      "price": 78500,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product12.jpg?v=1698312943&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product12.2.jpg?v=1698312943&width=533"
+    },
+    {
+      "id": "12",
+      "name": "Electric Scotter",
+      "price": 85300,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product13.jpg?v=1698313272&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product13.2.jpg?v=1698313279&width=533"
+    },
+    {
+      "id": "13",
+      "name": "Electric Scotter",
+      "price": 20000,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product14.jpg?v=1698313968&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product13.2.jpg?v=1698313279&width=533"
+    },
+    {
+      "id": "12",
+      "name": "Electric Scotter",
+      "price": 50000,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product17.jpg?v=1698325716",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product13.2.jpg?v=1698313279&width=533"
+    },
+    {
+      "id": "12",
+      "name": "Electric Scotter",
+      "price": 14500,
+      "description": "charging convienence included",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product19.jpg?v=1698661739&width=533",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product19.1.jpg?v=1698661739&width=533"
+    }
+  ],
+  "OrderPlaced": [
+    {
+      "id": "6158",
+      "first_name": "anurag",
+      "Last_name": "pandey",
+      "address": "kolar road chunnabhatti bhopal",
+      "email": "anuragpandey8056@gmail.com",
+      "Phone": "78457856995",
+      "additional_info": "hhhhh",
+      "amount": "274000",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533",
+      "productname": "Glide Grip ",
+      "qnty": 1,
+      "ModofPayment": "upi"
+    },
+    {
+      "id": "d153",
+      "first_name": "divyanshu",
+      "Last_name": "chauahan",
+      "address": "kolar road chunnabhatti bhopal",
+      "email": "anuragpandey8056@gmail.com",
+      "Phone": "6260712033",
+      "additional_info": "jaldi pahuchaooo",
+      "amount": "217000",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533",
+      "productname": "Aqua shine smart",
+      "qnty": 1,
+      "ModofPayment": "cash"
+    },
+    {
+      "id": "807b",
+      "amount": "177000",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533",
+      "productname": "Glide Grip ",
+      "qnty": 1,
+      "ModofPayment": "cash"
+    }
+  ],
+  "AdminLogin": [
+    {
+      "usename": "admin1",
+      "password": "1234",
+      "id": "8000"
+    },
+    {
+      "usename": "admin2",
+      "password": "1214",
+      "id": "c26f"
+    },
+    {
+      "usename": "admin3",
+      "password": "123",
+      "id": "cf21"
+    },
+    {
+      "usename": "admin4",
+      "password": "1235",
+      "id": "06ba"
+    }
+  ]
+}

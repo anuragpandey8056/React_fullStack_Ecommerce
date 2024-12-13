@@ -1,0 +1,284 @@
+/* shop.jsx================================================= */
+#shopcard{
+    width: 30rem;
+    border: black;
+    margin: 10px ;
+    transition: 0.3s;
+    flex-wrap: wrap;
+}
+#shopidbody{
+    background-color: #1b1b1b;
+    color: white;
+}
+#shopcardtitle{
+    display: flex;
+    justify-content: space-evenly;
+}
+#shopicon{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#shopitemshow{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #1b1b1b;
+}
+#filter{
+    font-size: 24px;
+    color: rgb(212, 70, 212);
+    position: fixed;
+    top: 101px;
+    right: 10px;
+    z-index: 23;
+}
+
+
+/* ========about.jsx======================= */
+
+#aboutsec1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+#aboutsec2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutsec3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    color: white;
+    margin-top: 40px;
+}
+#aboutsec4{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+#aboutbtn{
+    border-radius: 40px;
+    padding: 10px 40px;
+    background-color: limegreen;
+    color: black;
+}
+#aboutbtn2{
+    border-radius: 40px;
+    padding: 10px 40px ;
+    border: 1px solid #ccc;
+    background-color: black;
+}
+#aboutdivvedio{
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutdivvedio vedio{
+    width: 100%;
+    max-width: 700px; 
+    height: auto;
+    cursor: pointer;
+}
+
+/* model.jsx================================ */
+#model1{
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+#model2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modeldiv1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+#modelcardbody{
+    background-color: #1b1b1b;
+    color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+#modelcardbtn{
+    border-radius: 40px;
+    padding: 10px 30px 10px 30px ;
+    background-color: limegreen;
+    color: black;
+}
+
+
+
+/* cart.jsx========================================== */
+
+#carttr1 {
+    margin: 20px 20px; /* Adjusted for better spacing */
+    border: none;
+    border-bottom: 0.5px solid rgb(196, 193, 193);
+}
+#carttd1 {
+    padding-right: 20px; /* Adjusted for smaller screens */
+    background-color: #1b1b1b;
+    color: white;
+    border: none;
+}
+#carddiv1 {
+    background-color: #1b1b1b;
+    padding: 50px 20px; /* Reduced padding for smaller screens */
+}
+#carddiv2 {
+    background-color: #1b1b1b;
+    color: white;
+    margin: 20px 10px; /* Adjusted margins for smaller screens */
+}
+#carddiv3 {
+    border: none;
+    display: flex;
+    justify-content: space-between; /* Adjust spacing for smaller screens */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-bottom: 30px;
+}
+#carddiv4 {
+    background-color: #1b1b1b;
+    color: white;
+    border: none;
+    text-align: center;
+}
+#smecardidv {
+    background-color: #1b1b1b;
+    color: white;
+    border: none;
+    text-align: center;
+}
+#carddiv5 {
+    display: flex;
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center;
+    gap: 20px; /* Spacing between elements */
+}
+#cardformcntrl {
+    padding: 15px; /* Adjusted for smaller screens */
+    width: 90%; /* Full width on smaller screens */
+    background-color: black;
+    color: white;
+    border: none;
+}
+#carddiv6 {
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#carddiv7 {
+    margin-right: 10px; /* Adjusted for smaller screens */
+}
+#carddiv8 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center; /* Center text for smaller screens */
+}
+#carddiv9 {
+    margin-bottom: 10px;
+}
+#carddivbutton {
+    border-radius: 40px;
+    padding: 10px 20px; /* Adjusted for smaller screens */
+    background-color: limegreen;
+    color: black;
+    width: 100%; /* Full width on smaller screens */
+}
+#carddivbutton2 {
+    background-color: black;
+    display: flex; /* Flexbox container */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* login.jsx=========================== */
+#logindiv1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+    
+    
+}
+#logindiv vedio{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#loginformdiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+#loginemail{
+    height: 50px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+#loginpass{
+    height: 50px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+#loginbtn{
+    margin-top: 20px;
+    padding: 10px 40px ;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+}
+#loginregisbtn{
+    margin-top: 20px;
+    padding: 10px 40px ;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+
+
+
+

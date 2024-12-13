@@ -1,0 +1,1071 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* header.jsx========================================================================================= */
+#basic-nav-dropdown {
+    background-color: #1b1b1b;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 4px;
+    color: white;
+}
+
+.social-icons #logo {
+    margin-right: 12px;
+}
+
+.marquee {
+    color: white;
+}
+
+.language-currency {
+    display: flex;
+    color: white;
+}
+
+.language-currency .dropdown {
+    margin-right: 70px;
+}
+
+.language-currency .dropdown-menu {
+    
+    color: white;
+  }
+  
+  .language-currency .dropdown-menu .dropdown-item:hover {
+    background-color: green !important;
+    color: white;
+  }
+  
+  .language-currency .dropdown-toggle {
+    color: white;
+  }
+  
+  .language-currency .dropdown-toggle:hover {
+    color: green;
+  }
+  
+
+  .language-currency .dropdown {
+    margin-right: 20px; 
+  }
+  
+
+/* =========================TOPMenu.jsx======================================================================= */
+
+#dropdown-account {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem; /* Consistent size for the icon */
+    cursor: pointer;
+    margin-left: 30px; /* Space it properly from other elements */
+}
+
+#dropdown-account svg {
+    margin-right: 5px; /* Optional: Add space between icon and text if needed */
+}
+
+.dropdown-menu {
+    background-color: #1b1b1b; /* Consistent dropdown background */
+    color: green;
+    border: none; /* Remove border if present */
+}
+
+.dropdown-item {
+    color: green;
+    display: flex;
+    align-items: center; /* Ensures items align vertically */
+    gap: 5px; /* Adds space between icon and text */
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect for better UX */
+}
+
+#dropdown-account,
+.dropdown-item {
+    vertical-align: middle; /* Ensures both elements are at the same vertical alignment */
+}
+
+#first {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 25px 0px;
+    background-color: rgb(207, 206, 204);
+    overflow-x: hidden;
+}
+
+#cool-admin {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+}
+
+#cool-admin div {
+    margin: 20px;
+    align-items: center;
+}
+
+#container {
+    align-items: center;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 140px; 
+    max-width: 400px;
+    background-color: rgb(219, 212, 212);
+
+    align-items: center;
+    border-radius: 40px;
+    padding: 6px 12px;
+    display: flex;
+    position: relative;
+}
+
+#search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 6px; 
+    font-size: 12px;
+}
+
+#search-bar i {
+    border: 0;
+    border-radius: 25px;
+    padding: 8px;
+    background: #58629b;
+    color: white;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgb(20, 20, 20);
+}
+#navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* overflow-x: hidden; */
+   
+
+
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.nav-link:hover {
+    color: green;
+}
+
+#navbartext {
+    color: white;
+}
+
+.navbar-brand {
+    margin-left: 300px;
+    margin-top: 15px;
+}
+
+#searchlogo {
+    display: flex;
+    margin-left: 400px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+
+#cartqnty {
+    border-radius: 50%;
+    /* Makes it a circle */
+    border: 2px solid red;
+    /* Red border */
+    width: 13px;
+    /* Equal width */
+    height: 13px;
+    /* Equal height */
+    display: flex;
+    /* Optional: Centers content */
+    align-items: center;
+    /* Optional: Centers content vertically */
+    justify-content: center;
+    text-align: center;
+    background-color: red;
+    color: black;
+    position: absolute;
+    top: 25px;
+    right: 114px;
+    z-index: 6;
+
+}
+
+
+
+/* ================HOME.jsx====================================================================================== */
+/* Card container */
+
+.card-custom {
+    width: 25rem;
+    border: black;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.card-body-custom {
+    background-color: #1b1b1b;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-text-custom {
+    font-size: 12px;
+    color: white;
+}
+
+.shop-icon-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: white;
+}
+
+.shop-icon div img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+/* ======================================================== */
+
+#section1{
+    overflow-x: hidden;
+}
+#corosolimg2{
+    overflow-x: hidden;
+    z-index: -1;
+}
+#corosolimg3{
+    overflow-x: hidden;
+    z-index: -1;
+
+}
+#corosolimg1{
+    overflow-x: hidden;
+    z-index: -1;
+
+}
+#corosoltxt {
+    margin-bottom: 220px;
+    margin-right: 480px;
+}
+
+#btncorosol1 {
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    margin: 20px;
+
+}
+#btncorosol2 {
+    border-radius: 40px;
+    padding: 5px 40px 5px 40px;
+
+
+
+}
+
+#btn1 {
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    margin: 20px;
+
+}
+
+#btn2 {
+    border-radius: 40px;
+    padding: 5px 40px 5px 40px;
+
+
+
+}
+
+@media (max-width: 768px) {
+    .carousel-caption-custom {
+        margin-right: 20px;
+        margin-bottom: 150px;
+    }
+
+    .carousel-heading {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ========================================================================= */
+#section1{
+    z-index: 5;
+}
+#div1{
+    background-color:#1b1b1b ;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+#sondiv1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+}
+#sondiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sondiv3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    color: white;
+    margin-top: 40px;
+}
+#sondiv4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+#btnsondiv4{
+    border-radius: 40px;
+    padding: 10px 40px;
+    background-color: limegreen;
+    color: black;
+}
+#linebtn{
+    width: 50px;
+    height: 1px ;
+    background-color: gray;
+}
+#btnsondiv5{
+    border-radius: 40px;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    background-color: black;
+}
+#sondiv6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+#Timer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+}
+
+
+#text {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.feature-block {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+#CXimg {
+    object-fit: cover;
+    height: 500px;
+}
+.d-flex .card {
+    flex: 1;
+    margin: 10px;
+}
+
+
+#card2quantam {
+    padding-top: 75px;
+}
+
+.product-option-button {
+    border-radius: 40px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: black;
+}
+
+/* Add to cart button */
+.add-to-cart-button {
+    border-radius: 40px;
+    padding: 0px 80px;
+    background-color: limegreen;
+    color: black;
+}
+
+/* Buy now button */
+.buy-now-button {
+    padding: 10px 100px;
+    background-color: black;
+}
+
+/* Layout for add to cart and buy now buttons */
+.product-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+/* Icon container styling */
+#addtocardbanner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#addtocardbanner>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#addtocardbanner img {
+    width: 40px;
+   
+    height: 40px;
+  
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+#addtocardbanner div>div {
+    font-size: 14px;
+}
+
+#button350w button {
+    margin-left: 20px;
+}
+
+#button350w {
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
+#qunatam {
+
+    min-height: 60vh;
+}
+
+#qunatamuppercard {
+    object-fit: cover;
+    height: 600px;
+
+}
+
+
+#section-header {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+#section-header h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#section-header .text-lg {
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+    height: 24rem;
+}
+
+.card-large, .card-small {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* Section for the four cards below the images */
+#four-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#four-cards .card-body {
+    padding: 1.25rem;
+    /* Equivalent to 20px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#four-cards .icon {
+    font-size: 1.75rem;
+    /* Equivalent to 28px */
+    margin-bottom: 1rem;
+}
+
+#four-cards .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#four-cards .card-text {
+    font-size: 1rem;
+}
+
+/* Specific background colors */
+#bg-dark {
+    background-color: #1b1b1b;
+}
+
+/* Card widths */
+#card-width {
+    width: 18rem;
+}
+
+
+
+
+
+
+/* ===============================================================checkout.jsx=============================== */
+#radioStyle input {
+    margin: 40px;
+}
+/* ==================================loader.jsx============================================ */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* Make the SVG responsive */
+    height: 600px;
+    margin: 0; /* Remove any default margin */
+    padding: 200px 200px 200px 200px;
+}
+
+#svg {
+    transform-origin: center;
+    animation: spin 2s linear infinite; /* Rotate the entire SVG */
+    width: 200px;  /* Fixed size */
+    height: auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        stroke-dasharray: 1, 800;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 400, 400;
+        stroke-dashoffset: -200px;
+    }
+    100% {
+        stroke-dasharray: 800, 1;
+        stroke-dashoffset: -800px;
+    }
+}
+
+.spin2 {
+    transform-origin: center;
+    animation: spin2 0.8s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+
+}
+
+#nav:hover {
+    color: green;
+
+}
+
+#basic-nav-dropdown:hover {
+    color: green;
+
+}
+
+#dropdown {
+    background-color: black;
+    color: white;
+}
+
+#dropdown:hover {
+
+    color: green;
+}
+
+#logo:hover {
+    color: green;
+
+}
+
+#Homecards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#div1icon {
+    div {
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin-right: 10px;
+
+    }
+}
+
+#text {
+
+    display: flex;
+    justify-content: space-evenly;
+
+    color: white;
+    padding-bottom: 100px;
+    cursor: pointer;
+
+}
+
+#addtocardbanner {
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: "1px solid  white";
+
+}
+
+#btn:hover {
+    border: "1px solid green"
+}
+
+.no-arrow::after {
+    display: none;
+}
+
+
+
+
+/* ==============================dashboard css */
+body {
+    background-color: #fbfbfb;
+  }
+  
+  @media (min-width: 992px) {
+    .sidebar {
+      height: unset!important;
+    }
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0;
+    /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    /* z-index: 600; */
+  }
+  
+  .sidebar.show {
+    height: 100vh;
+  }
+  
+  @media (max-width: 992px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
+
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+  }
+
+
+  /* Dashboard */
+ 
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dashboard-body {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+  
+    /* margin-top: 72px; */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #09ee42;
+    border-radius: 20px 20px 20px 20px;
+}
+#navbaraside li{
+    margin-top: 30px;
+    list-style: none;
+   
+
+}
+
+#navbaraside ul{
+   
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+#navbaraside a, #navbaraside a:link, #navbaraside a:visited {
+    text-decoration: none; /* Removes underline for links */
+    color: inherit; /* Keeps text color consistent */
+}
+
+
+
+.main-content {
+    flex: 1;
+    padding: 0px,0px 0px 0px ;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 180px;
+  
+   
+}
+
+
+
+/* dashobard insert page  */
+
+.form-container {
+    width:95% ;
+    /* margin: 50px auto; */
+    padding: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.form-container .form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-container .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .form-control:focus {
+    border-color: limegreen;
+    box-shadow: 0 0 5px limegreen;
+}
+
+.form-container .input-group-text {
+    background-color: limegreen;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.form-container .btn {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: limegreen;
+    border: none;
+    color: black;
+    border-radius: 40px;
+    padding: 10px 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-container .btn:hover {
+    background-color: #45a049;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* editpage dashboard */
+/* Common container styles for both Insert and Edit */
+.form-container {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    height: 650px;
+    margin-top: 0px;
+    
+   
+    padding-right:60px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(22, 22, 22, 0.1);
+    background-color: #111010;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: limegreen;
+  }
+  
+  .form-container .mb-3 {
+    margin-bottom: 15px;
+  }
+  
+  .form-container label {
+    font-weight: bold;
+    color: #111010;
+  }
+  
+  .form-container input {
+    border-radius: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .form-container button {
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 40px;
+    padding: 10px 40px;
+    background-color: limegreen;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #28a745;
+  }
+  
+  .form-container input:focus {
+    border-color: limegreen;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(0, 255, 0, 0.4);
+  }
+  
