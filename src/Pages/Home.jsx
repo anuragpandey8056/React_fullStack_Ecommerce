@@ -47,7 +47,7 @@ const Home = () => {
     const padZero = (number) => (number < 10 ? `0${number}` : number);
     //   ================================timer code ended
     const loaddata = () => {
-        let api = "http://localhost:3000/data"
+        let api = "https://react-jsonserver.onrender.com/data"
         axios.get(api).then((res) => {
             setmydata(res.data)
 
