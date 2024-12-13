@@ -6,7 +6,7 @@ const OrderPlaced = () => {
     const [data, setdata] = useState([]);
 
     const loaddata = () => {
-        let api = "http://localhost:3000/OrderPlaced";
+        let api = "https://react-jsonserver.onrender.com/OrderPlaced";
         axios.get(api).then((resp) => {
             setdata(resp.data);
         });
