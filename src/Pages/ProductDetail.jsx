@@ -15,7 +15,7 @@ const ProductDetail = () => {
     const [hoverStates, setHoverStates] = useState({});
 
     const loaddata = () => {
-        let api = `http://localhost:3000/shop/${id}`;
+        let api = `https://react-jsonserver.onrender.com/data/${id}`;
         axios.get(api).then((res) => {
             setmydata(res.data);
 
