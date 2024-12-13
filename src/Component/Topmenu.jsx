@@ -53,7 +53,7 @@ const Topmenu = () => {
 
 
   const loadData = () => {
-    let url = "http://localhost:3000/AdminLogin";
+    let url = "https://react-jsonserver.onrender.com/AdminLogin";
     axios.get(url).then((resp) => {
       setJsonAdminData(resp.data);
     });
