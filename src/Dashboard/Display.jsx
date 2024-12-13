@@ -10,7 +10,7 @@ const Display=()=>{
     const [data, setdata] = useState([]);
 
     const loaddata = () => {
-        let api = "http://localhost:3000/shop";
+        let api = "https://react-jsonserver.onrender.com/shop";
         axios.get(api).then((resp) => {
             setdata(resp.data);
         });
@@ -21,7 +21,7 @@ const Display=()=>{
     }, []);
 
     const Del=(id)=>{
-      let url = `http://localhost:3000/shop/${id}`
+      let url = `https://react-jsonserver.onrender.com/shop/${id}`
       axios.delete(url).then((resp)=>{
         console.log(resp)
         message.error("data deleted ")
