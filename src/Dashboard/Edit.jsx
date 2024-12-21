@@ -13,7 +13,7 @@ const Edit = () => {
   });
 
   const loadata = () => {
-    let api = `http://localhost:3000/shop/${id}`;
+    let api = `https://react-jsonserver.onrender.com/shop/${id}`;
     axios.get(api).then((resp) => {
       setmydata(resp.data);
     });
@@ -30,7 +30,7 @@ const Edit = () => {
   };
 
   const HandleSubmit = () => {
-    let url = `http://localhost:3000/shop/${id}`;
+    let url = `https://react-jsonserver.onrender.com/shop/${id}`;
     axios.put(url, mydata).then(() => {
       alert("Successfully updated");
       setmydata({

@@ -38,7 +38,7 @@ const Shop = () => {
 
     const [hoverStates, setHoverStates] = useState({});
     const loaddata = () => {
-        let api = "http://localhost:3000/shop"
+        let api = "https://react-jsonserver.onrender.com/shop"
         axios.get(api).then((res) => {
             setmydata(res.data)
 
@@ -53,7 +53,7 @@ const Shop = () => {
     }
 
     const showdata=()=>{
-        let api ="http://localhost:3000/shop";
+        let api ="";
         axios.get(api).then((res)=>{
             setShowFilter(false);
             setmydata(res.data);

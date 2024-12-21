@@ -85,7 +85,7 @@ const Checkout = () => {
         };
 
 
-        let url = "http://localhost:3000/OrderPlaced";
+        let url = "https://react-jsonserver.onrender.com/OrderPlaced";
         axios.post(url, finalFormData).then((resp) => {
             console.log(resp)
             

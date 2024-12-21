@@ -15,7 +15,7 @@ const Search = () => {
 
    
     const loadData = () => {
-        let api = "http://localhost:3000/shop";
+        let api = "https://react-jsonserver.onrender.com/shop";
         axios.get(api)
             .then((res) => {
                 setMyData(res.data);
