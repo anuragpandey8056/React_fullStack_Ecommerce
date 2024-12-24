@@ -100,14 +100,22 @@ const Topmenu = () => {
 
 
 
-      <Navbar id='navbar'>
+     
+      <Navbar id='navbar' expand="lg">
         <Container>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="home" style={{ color: "green" }}>Home</Nav.Link>
-            <Nav.Link as={Link} to="shop" style={{ color: "white" }} id='nav'>Shop</Nav.Link>
-            <Nav.Link as={Link} to="About" style={{ color: "white" }} id='nav'>About</Nav.Link>
-            <Nav.Link as={Link} to="model" style={{ color: "white" }} id='nav'>Model</Nav.Link>
-            <Nav.Link as={Link} to="contact" style={{ color: "white" }} id='nav'>Contact</Nav.Link>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: '100px' }}
+              navbarScroll
+
+            >
+              <Nav.Link as={Link} to="home" style={{ color: "green" }}>Home</Nav.Link>
+              <Nav.Link as={Link} to="shop" style={{ color: "white" }} id='nav'>Shop</Nav.Link>
+              <Nav.Link as={Link} to="About" style={{ color: "white" }} id='nav'>About</Nav.Link>
+              <Nav.Link as={Link} to="model" style={{ color: "white" }} id='nav'>Model</Nav.Link>
+              <Nav.Link as={Link} to="contact" style={{ color: "white" }} id='nav'>Contact</Nav.Link>
+            </Nav>
 
             <Navbar.Brand href="#home">
               <img
@@ -122,7 +130,7 @@ const Topmenu = () => {
             <nav id='searchlogo' style={{ display: "flex", alignItems: "center", gap: "3px" }}>
               {searchActive ? (
                 <div id="container">
-                  <form  id="search-bar">
+                  <form id="search-bar">
                     <input
                       type="text"
                       placeholder="Search anything"
@@ -130,12 +138,12 @@ const Topmenu = () => {
                       value={searchTxt}
                       onChange={handleSearchChange}
                     />
-                    <i onClick={ SubmitSearch}  className="fa-solid fa-magnifying-glass"  style={{ cursor: "pointer" }}></i>
+                    <i onClick={SubmitSearch} className="fa-solid fa-magnifying-glass" style={{ cursor: "pointer" }}></i>
 
-                   
+
                   </form>
 
-                 
+
                 </div>
               ) : (
                 <Nav.Link
@@ -151,7 +159,7 @@ const Topmenu = () => {
                 <Dropdown.Toggle
                   as="div"
                   id="dropdown-account"
-                  
+
                 >
                   <VscAccount style={{ color: "white", fontSize: "1.3rem", marginLeft: "30px" }} />
                 </Dropdown.Toggle>
@@ -165,8 +173,8 @@ const Topmenu = () => {
 
               <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }}><MdOutlineShoppingBag /></Nav.Link>
             </nav>
-          </Nav>
-          <div id='cartqnty'>{cartlen}</div>
+            <div id='cartqnty'>{cartlen}</div>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
