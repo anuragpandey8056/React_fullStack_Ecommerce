@@ -18,10 +18,10 @@ import Modal from 'react-bootstrap/Modal';
 
 
 const Shop = () => {
-    const [lowPrice, setLowPrice]=useState("");
-    const [highPrice, setHighPrice]=useState("");
-    const [showFilter, setShowFilter]=useState(true);
-    
+    const [lowPrice, setLowPrice] = useState("");
+    const [highPrice, setHighPrice] = useState("");
+    const [showFilter, setShowFilter] = useState(true);
+
 
 
     const [show, setShow] = useState(false);
@@ -52,13 +52,13 @@ const Shop = () => {
 
     }
 
-    const showdata=()=>{
-        let api ="";
-        axios.get(api).then((res)=>{
+    const showdata = () => {
+        let api = "";
+        axios.get(api).then((res) => {
             setShowFilter(false);
             setmydata(res.data);
-           
-            
+
+
 
         })
     }
@@ -67,8 +67,8 @@ const Shop = () => {
         loaddata();
     }, [])
 
-    useEffect(()=>{
-        if(lowPrice=="" && highPrice==""){
+    useEffect(() => {
+        if (lowPrice == "" && highPrice == "") {
             setShowFilter(true);
         }
 
@@ -174,79 +174,79 @@ const Shop = () => {
         )
     })
     const ans1 = mydata.map((key) => {
-        if (key.price>=lowPrice && key.price<=highPrice){
-        return (
-            <>
+        if (key.price >= lowPrice && key.price <= highPrice) {
+            return (
+                <>
 
 
-                <Card
-                    className="shadow-lg"
-                    key={key.id}
-                    id="shopcard"
+                    <Card
+                        className="shadow-lg"
+                        key={key.id}
+                        id="shopcard"
 
 
-                    onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage)}
-                    onMouseLeave={() => handleMouseLeave(key.id, key.image)}
-                >
-                    <Card.Img variant="top" onClick={() => { ProductDetail(key.id) }} src={hoverStates[key.id]} />
-                    <Card.Body id="shopidbody" >
-                        <Card.Title id="shopcardtitle" >
-                            <div> {key.name}</div>
-                            <div>
-                                <Button onClick={() => { cartdata(key.id, key.name, key.price, key.description, key.image) }} id="btn" style={{ borderRadius: "40px", padding: "10px 40px", border: "1px solid #ccc", backgroundColor: "black" }}>Buy now</Button>
-
-                            </div>
-                        </Card.Title>
-                        <Card.Text style={{ fontSize: "20px" }}>
-                            {key.description} &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;<div>
-                            <FaRupeeSign />{key.price}  </div>
-                        </Card.Text>
-
-                        <div id="shopicon" >
-                            <div>
-                                <img
-                                    src="https://greenshift-road.myshopify.com/cdn/shop/files/Emission-icon.svg?v=1694095411"
-                                    alt="Duration Icon"
-                                />
+                        onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage)}
+                        onMouseLeave={() => handleMouseLeave(key.id, key.image)}
+                    >
+                        <Card.Img variant="top" onClick={() => { ProductDetail(key.id) }} src={hoverStates[key.id]} />
+                        <Card.Body id="shopidbody" >
+                            <Card.Title id="shopcardtitle" >
+                                <div> {key.name}</div>
                                 <div>
-                                    Duration <br />
-                                    6 hrs
+                                    <Button onClick={() => { cartdata(key.id, key.name, key.price, key.description, key.image) }} id="btn" style={{ borderRadius: "40px", padding: "10px 40px", border: "1px solid #ccc", backgroundColor: "black" }}>Buy now</Button>
+
+                                </div>
+                            </Card.Title>
+                            <Card.Text style={{ fontSize: "20px" }}>
+                                {key.description} &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;<div>
+                                    <FaRupeeSign />{key.price}  </div>
+                            </Card.Text>
+
+                            <div id="shopicon" >
+                                <div>
+                                    <img
+                                        src="https://greenshift-road.myshopify.com/cdn/shop/files/Emission-icon.svg?v=1694095411"
+                                        alt="Duration Icon"
+                                    />
+                                    <div>
+                                        Duration <br />
+                                        6 hrs
+                                    </div>
+                                </div>
+                                <div>
+                                    <img
+                                        src="https://greenshift-road.myshopify.com/cdn/shop/files/Range-icon.svg?v=1694093594"
+                                        alt="Range Icon"
+                                    />
+                                    <div>
+                                        Range <br />
+                                        126 km
+                                    </div>
+                                </div>
+                                <div>
+                                    <img
+                                        src="https://greenshift-road.myshopify.com/cdn/shop/files/Battery-icon.svg?v=1694093243"
+                                        alt="Battery Icon"
+                                    />
+                                    <div>
+                                        Battery <br />
+                                        77 kWh
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <img
-                                    src="https://greenshift-road.myshopify.com/cdn/shop/files/Range-icon.svg?v=1694093594"
-                                    alt="Range Icon"
-                                />
-                                <div>
-                                    Range <br />
-                                    126 km
-                                </div>
-                            </div>
-                            <div>
-                                <img
-                                    src="https://greenshift-road.myshopify.com/cdn/shop/files/Battery-icon.svg?v=1694093243"
-                                    alt="Battery Icon"
-                                />
-                                <div>
-                                    Battery <br />
-                                    77 kWh
-                                </div>
-                            </div>
-                        </div>
 
 
-                    </Card.Body>
+                        </Card.Body>
 
 
-                </Card>
+                    </Card>
 
 
 
 
-            </>
-        )
-    }
+                </>
+            )
+        }
     })
 
 
@@ -257,10 +257,10 @@ const Shop = () => {
     return (
         <>
 
-         
-            <div id="filter"   onClick={handleShow}><FaFilter /></div>
 
-           
+            <div id="filter" onClick={handleShow}><FaFilter /></div>
+
+
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -276,7 +276,7 @@ const Shop = () => {
                                 autoFocus
                                 name="low"
                                 value={lowPrice}
-                                onChange={(e)=>{setLowPrice(e.target.value)}}
+                                onChange={(e) => { setLowPrice(e.target.value) }}
                             />
                         </Form.Group>
 
@@ -288,20 +288,20 @@ const Shop = () => {
                                 autoFocus
                                 name="high"
                                 value={highPrice}
-                                onChange={(e)=>{setHighPrice(e.target.value)}}
+                                onChange={(e) => { setHighPrice(e.target.value) }}
 
                             />
                         </Form.Group>
 
-                        
-                       
+
+
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button  onDoubleClick={handleClose} variant="primary" onClick={showdata}>
+                    <Button onDoubleClick={handleClose} variant="primary" onClick={showdata}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
@@ -309,7 +309,7 @@ const Shop = () => {
 
 
             <div id="shopitemshow" >
-                {showFilter?ans:ans1}</div>
+                {showFilter ? ans : ans1}</div>
 
 
 
