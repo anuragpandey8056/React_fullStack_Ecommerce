@@ -521,6 +521,7 @@
     #navbar {
         padding: 8px;
         flex-direction: column;
+        background-color: #232323dd
     }
 
     .navbar-brand {
@@ -534,15 +535,17 @@
     }
 
     #cartqnty {
-        top: 5px;
+        top: 125px;
         width: 8px;
         height: 8px;
+        left: 180px;
     }
 
     .nav-link {
         font-size: 10px;
         padding: 4px;
     }
+    
 
 
 
@@ -651,7 +654,10 @@
         padding: 10px;
         text-align: center;
     }
+    
 
+   
+  
 
 
 

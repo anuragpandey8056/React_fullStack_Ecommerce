@@ -418,12 +418,12 @@ const Home = () => {
                                     </div>
                                 </Card.Text>
                                 <div id="button350w">
-                                    <Button className="product-option-button">350W</Button>
-                                    <Button className="product-option-button">550W</Button>
+                                    <Button style={{marginBottom:"5px"}} className="product-option-button py-2 px-4">350W</Button>
+                                    <Button className="product-option-button py-2 px-4">550W</Button>
                                 </div>
-                                <div className="product-button-container">
-                                    <Button className="add-to-cart-button"> <center>Add to cart</center> </Button>
-                                    <Button className="buy-now-button">Buy now</Button>
+                                <div id="addtoooo"  className="product-button-container flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center items-center">
+                                    <Button className="add-to-cart-button w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded text-center"> <center>Add to cart</center> </Button>
+                                    <Button className="buy-now-button w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center">Buy now</Button>
                                 </div>
                             </Card.ImgOverlay>
                         </Card>

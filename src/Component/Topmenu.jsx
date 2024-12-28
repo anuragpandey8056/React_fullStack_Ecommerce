@@ -100,86 +100,80 @@ const Topmenu = () => {
 
 
 
-<<<<<<< HEAD
-
-
-=======
-     
->>>>>>> 46ac6f12cf64b78a152b9c4f3aebd2fe3882bab6
       <Navbar id='navbar' expand="lg">
         <Container>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
-              navbarScroll
-
-            >
-              <Nav.Link as={Link} to="home" style={{ color: "green" }}>Home</Nav.Link>
-              <Nav.Link as={Link} to="shop" style={{ color: "white" }} id='nav'>Shop</Nav.Link>
-              <Nav.Link as={Link} to="About" style={{ color: "white" }} id='nav'>About</Nav.Link>
-              <Nav.Link as={Link} to="model" style={{ color: "white" }} id='nav'>Model</Nav.Link>
-              <Nav.Link as={Link} to="contact" style={{ color: "white" }} id='nav'>Contact</Nav.Link>
-            </Nav>
-
-            <Navbar.Brand href="#home">
-              <img
-                src="https://greenshift-road.myshopify.com/cdn/shop/files/GlideX_Logo.svg?v=1709810815&width=203"
-                width="100"
-                height="80"
-                className="d-inline-block align-top"
-                alt="React Bootstrap logo"
-              />
-            </Navbar.Brand>
-
-            <nav id='searchlogo' style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              {searchActive ? (
-                <div id="container">
-                  <form id="search-bar">
-                    <input
-                      type="text"
-                      placeholder="Search anything"
-                      name="search"
-                      value={searchTxt}
-                      onChange={handleSearchChange}
-                    />
-                    <i onClick={SubmitSearch} className="fa-solid fa-magnifying-glass" style={{ cursor: "pointer" }}></i>
 
 
-                  </form>
+          <Nav className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+
+          >
+            <Nav.Link as={Link} to="home" style={{ color: "green" }}>Home</Nav.Link>
+            <Nav.Link as={Link} to="shop" style={{ color: "white" }} id='nav'>Shop</Nav.Link>
+            <Nav.Link as={Link} to="About" style={{ color: "white" }} id='nav'>About</Nav.Link>
+            <Nav.Link as={Link} to="model" style={{ color: "white" }} id='nav'>Model</Nav.Link>
+            <Nav.Link as={Link} to="contact" style={{ color: "white" }} id='nav'>Contact</Nav.Link>
+          </Nav>
+
+          <Navbar.Brand href="#home">
+            <img
+              src="https://greenshift-road.myshopify.com/cdn/shop/files/GlideX_Logo.svg?v=1709810815&width=203"
+              width="100"
+              height="80"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+
+          <nav id='searchlogo' style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+            {searchActive ? (
+              <div id="container">
+                <form id="search-bar">
+                  <input
+                    type="text"
+                    placeholder="Search anything"
+                    name="search"
+                    value={searchTxt}
+                    onChange={handleSearchChange}
+                  />
+                  <i onClick={SubmitSearch} className="fa-solid fa-magnifying-glass" style={{ cursor: "pointer" }}></i>
 
 
-                </div>
-              ) : (
-                <Nav.Link
-                  as={Link}
-                  to="search"
-                  style={{ color: "white", fontSize: "1.5rem" }}
-                >
-                  <CiSearch onClick={toggleSearch} />
-                </Nav.Link>
-              )}
+                </form>
 
-              <Dropdown >
-                <Dropdown.Toggle
-                  as="div"
-                  id="dropdown-account"
 
-                >
-                  <VscAccount style={{ color: "white", fontSize: "1.3rem", marginLeft: "30px" }} />
-                </Dropdown.Toggle>
+              </div>
+            ) : (
+              <Nav.Link
+                as={Link}
+                to="search"
+                style={{ color: "white", fontSize: "1.5rem" }}
+              >
+                <CiSearch onClick={toggleSearch} />
+              </Nav.Link>
+            )}
 
-                <Dropdown.Menu style={{ backgroundColor: "#1b1b1b", color: "green" }}>
-                  <Dropdown.Item onClick={handleShow} style={{ color: "green" }}>Admin login</Dropdown.Item>
-                  <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/register") }}>Login</Dropdown.Item>
-                  <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Logout</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+            <Dropdown >
+              <Dropdown.Toggle
+                as="div"
+                id="dropdown-account"
 
-              <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }}><MdOutlineShoppingBag /></Nav.Link>
-            </nav>
-            <div id='cartqnty'>{cartlen}</div>
-          </Navbar.Collapse>
+              >
+                <VscAccount style={{ color: "white", fontSize: "1.3rem", marginLeft: "30px" }} />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu style={{ backgroundColor: "#1b1b1b", color: "green" }}>
+                <Dropdown.Item onClick={handleShow} style={{ color: "green" }}>Admin login</Dropdown.Item>
+                <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/register") }}>Login</Dropdown.Item>
+                <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Logout</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }}><MdOutlineShoppingBag /></Nav.Link>
+          </nav>
+          <div id='cartqnty'>{cartlen}</div>
+
         </Container>
       </Navbar>
 
