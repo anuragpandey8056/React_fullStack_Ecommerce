@@ -2,171 +2,132 @@ import { useState } from "react";
 import myvdo from "../Images/vedio.mp4";
 import { Button } from "@material-tailwind/react";
 import Form from "react-bootstrap/Form";
+import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
- 
   const obj = {
     email,
     password,
     cnfpass: confirmPassword,
   };
 
- 
   const SubmitForm = () => {
-      window.localStorage.setItem("data", JSON.stringify(obj));
-      navigate("/login")
-
+    window.localStorage.setItem("data", JSON.stringify(obj));
+    navigate("/login");
   };
 
   const handleInputChange = (setState) => (e) => {
     setState(e.target.value);
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-   
     SubmitForm();
     alert("Registration successful!");
   };
 
   return (
-    <>
-      <div style={{ position: "relative", width: "100%", height: "100vh" }}>
-        {/* Video Section */}
-        <video
-          autoPlay
-          muted
-          loop
-          src={myvdo}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        ></video>
+    <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        src={myvdo}
+        className="w-100 h-100 position-absolute"
+        style={{ objectFit: "cover", zIndex: -1 }}
+      ></video>
 
-        {/* Form Section */}
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            padding: "20px",
-            borderRadius: "10px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-            backdropFilter: "blur(5px)",
-          }}
-        >
-          <Form
-            onSubmit={handleSubmit}
-            style={{
-              padding: "40px",
-              width: "500px",
-              height: "auto",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            {/* Email Input */}
-            <Form.Group className="mb-4" controlId="formBasicEmail" style={{ width: "100%" }}>
-              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                value={email}
-                onChange={handleInputChange(setEmail)}
-                placeholder="Enter email"
-                style={{
-                  height: "50px",
-                  fontSize: "1rem",
-                  padding: "10px",
-                  borderRadius: "8px",
-                }}
-              />
-            </Form.Group>
-
-            {/* Password Input */}
-            <Form.Group className="mb-4" controlId="formBasicPassword" style={{ width: "100%" }}>
-              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>Password</Form.Label>
-              <Form.Control
-                type="password"
-                value={password}
-                onChange={handleInputChange(setPassword)}
-                placeholder="Enter password"
-                style={{
-                  height: "50px",
-                  fontSize: "1rem",
-                  padding: "10px",
-                  borderRadius: "8px",
-                }}
-              />
-            </Form.Group>
-
-            {/* Confirm Password Input */}
-            <Form.Group className="mb-4" controlId="formBasicCnfPassword" style={{ width: "100%" }}>
-              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>Confirm Password</Form.Label>
-              <Form.Control
-                type="password"
-                value={confirmPassword}
-                onChange={handleInputChange(setConfirmPassword)}
-                placeholder="Confirm password"
-                style={{
-                  height: "50px",
-                  fontSize: "1rem",
-                  padding: "10px",
-                  borderRadius: "8px",
-                }}
-              />
-            </Form.Group>
-
-            {/* Submit Button */}
-            <Button
+      {/* Centered Form Container */}
+      <Container fluid className="h-100 d-flex justify-content-center align-items-center">
+        <Row className="w-100 justify-content-center">
+          <Col xs={10} sm={8} md={6} lg={5} xl={4}>
+            <div
+              className="p-4 rounded"
               style={{
-                marginTop: "20px",
-                padding: "10px 40px",
-                borderRadius: "40px",
-                backgroundColor: "black",
-                color: "white",
-                fontSize: "1.1rem",
-                cursor: "pointer",
-                textAlign: "center",
+                background: "rgba(255, 255, 255, 0.2)", // Transparent white background
+                backdropFilter: "blur(10px)", // Frosted-glass effect
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
               }}
-              type="submit"
             >
-              Register
-            </Button>
+              <Form onSubmit={handleSubmit}>
+                {/* Email Field */}
+                <Form.Group controlId="formBasicEmail" className="mb-3">
+                  <Form.Label>Email Address</Form.Label>
+                  <Form.Control
+                    type="email"
+                    value={email}
+                    onChange={handleInputChange(setEmail)}
+                    placeholder="Enter email"
+                  />
+                </Form.Group>
 
-            <Button  onClick={()=>{navigate("/login")}}
-             style={{
-                marginTop: "20px",
-                padding: "20px 40px",
-                borderRadius: "40px",
-                backgroundColor: "black",
-                color: "white",
-                fontSize: "1.1rem",
-                cursor: "pointer",
-                textAlign: "center",
-              }}>Login</Button>
-          </Form>
-        </div>
-      </div>
-    </>
+                {/* Password Field */}
+                <Form.Group controlId="formBasicPassword" className="mb-3">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    value={password}
+                    onChange={handleInputChange(setPassword)}
+                    placeholder="Enter password"
+                  />
+                </Form.Group>
+
+                {/* Confirm Password Field */}
+                <Form.Group controlId="formBasicCnfPassword" className="mb-3">
+                  <Form.Label>Confirm Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    value={confirmPassword}
+                    onChange={handleInputChange(setConfirmPassword)}
+                    placeholder="Confirm password"
+                  />
+                </Form.Group>
+
+                {/* Register Button */}
+                <Button
+                  type="submit"
+                  className="w-100 mb-3"
+                  style={{
+                    borderRadius: "40px",
+                    backgroundColor: "black",
+                    color: "white",
+                  }}
+                >
+                  Register
+                </Button>
+
+                {/* Login Button */}
+                <Button
+                  onClick={() => navigate("/login")}
+                  className="w-100"
+                  style={{
+                    borderRadius: "40px",
+                    backgroundColor: "black",
+                    color: "white",
+                  }}
+                >
+                  Login
+                </Button>
+              </Form>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

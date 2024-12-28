@@ -60,22 +60,29 @@ const Login = () => {
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
             backdropFilter: "blur(5px)",
+            background: "rgba(255, 255, 255, 0.2)", // Transparent background
+            width: "90%", // Default for mobile
+            maxWidth: "500px", // Limit width for larger screens
           }}
         >
           <Form
             onSubmit={handleSubmit}
             style={{
-              padding: "40px",
-              width: "500px",
-              height: "auto",
+              padding: "20px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
             }}
           >
             {/* Email Input */}
-            <Form.Group className="mb-4" controlId="formBasicEmail" style={{ width: "100%" }}>
-              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>Email address</Form.Label>
+            <Form.Group
+              className="mb-4"
+              controlId="formBasicEmail"
+              style={{ width: "100%" }}
+            >
+              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                Email address
+              </Form.Label>
               <Form.Control
                 type="email"
                 value={email}
@@ -91,8 +98,14 @@ const Login = () => {
             </Form.Group>
 
             {/* Password Input */}
-            <Form.Group className="mb-4" controlId="formBasicPassword" style={{ width: "100%" }}>
-              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>Password</Form.Label>
+            <Form.Group
+              className="mb-4"
+              controlId="formBasicPassword"
+              style={{ width: "100%" }}
+            >
+              <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                Password
+              </Form.Label>
               <Form.Control
                 type="password"
                 value={password}
@@ -118,25 +131,31 @@ const Login = () => {
                 fontSize: "1.1rem",
                 cursor: "pointer",
                 textAlign: "center",
+                width: "100%", // Full-width button
               }}
               type="submit"
             >
               Login
             </Button>
 
-
-            <Button  onClick={()=>{navigate("/register")}}
-             style={{
+            <Button
+              onClick={() => {
+                navigate("/register");
+              }}
+              style={{
                 marginTop: "20px",
-                padding: "20px 40px",
+                padding: "10px 40px",
                 borderRadius: "40px",
                 backgroundColor: "black",
                 color: "white",
                 fontSize: "1.1rem",
                 cursor: "pointer",
                 textAlign: "center",
-              }}>Register</Button>
-          
+                width: "100%", // Full-width button
+              }}
+            >
+              Register
+            </Button>
           </Form>
         </div>
       </div>
