@@ -59,7 +59,7 @@ const Register = () => {
               className="p-4 rounded"
               style={{
                 background: "rgba(255, 255, 255, 0.2)", // Transparent white background
-                backdropFilter: "blur(10px)", // Frosted-glass effect
+                backdropFilter: "blur(-100px)", // Frosted-glass effect
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
               }}
             >

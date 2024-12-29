@@ -59,7 +59,7 @@ const Login = () => {
             padding: "20px",
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-            backdropFilter: "blur(5px)",
+            backdropFilter: "blur(-100px)",
             background: "rgba(255, 255, 255, 0.2)", // Transparent background
             width: "90%", // Default for mobile
             maxWidth: "500px", // Limit width for larger screens
