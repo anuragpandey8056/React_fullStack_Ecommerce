@@ -38,7 +38,7 @@ const Shop = () => {
         })
     }
     const showdata = () => {
-        let api = "";
+        let api = "https://react-jsonserver.onrender.com/shop";
         axios.get(api).then((res) => {
             setShowFilter(false);
             setmydata(res.data);
@@ -73,96 +73,93 @@ const Shop = () => {
     const ans = mydata.map((key) => {
         return (
             <>
-                <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={key.id}>
-                    <Card
-                        className="shadow-lg mb-4" // Added margin for spacing on small screens
-                        key={key.id}
-                        id="shopcard"
-                        onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage)}
-                        onMouseLeave={() => handleMouseLeave(key.id, key.image)}
-                    >
-                        {/* Card Image */}
-                        <Card.Img
-                            variant="top"
-                            onClick={() => {
-                                ProductDetail(key.id);
-                            }}
-                            src={hoverStates[key.id]}
-                            style={{
-                                height: "auto",
-                                width: "100%",
-                                objectFit: "cover", // Ensures image fits well
-                            }}
-                        />
+                <Card
+                    className="shadow-lg mb-4" // Added margin for spacing on small screens
+                    key={key.id}
+                    id="shopcard"
+                    onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage)}
+                    onMouseLeave={() => handleMouseLeave(key.id, key.image)}
+                >
+                    {/* Card Image */}
+                    <Card.Img
+                        variant="top"
+                        onClick={() => {
+                            ProductDetail(key.id);
+                        }}
+                        src={hoverStates[key.id]}
+                        style={{
+                            height: "auto",
+                            width: "100%",
+                            objectFit: "cover", // Ensures image fits well
+                        }}
+                    />
 
-                        {/* Card Body */}
+                    {/* Card Body */}
+                    <Card.Body id="shopidbody">
+                        {/* Card Title and Button */}
+                        <Card.Title id="shopcardtitle" className="d-flex justify-content-between align-items-center">
+                            <div>{key.name}</div>
+                            <Button
+                                onClick={() => {
+                                    cartdata(key.id, key.name, key.price, key.description, key.image);
+                                }}
+                                id="btn"
+                                style={{
+                                    borderRadius: "40px",
+                                    padding: "10px 20px",
+                                    border: "1px solid #ccc",
+                                    backgroundColor: "black",
+                                    fontSize: "0.9rem", // Adjusted for smaller screens
+                                }}
+                            >
+                                Buy now
+                            </Button>
+                        </Card.Title>
 
-                        <Card.Body id="shopidbody">
-                            {/* Card Title and Button */}
-                            <Card.Title id="shopcardtitle" className="d-flex justify-content-between align-items-center">
-                                <div>{key.name}</div>
-                                <Button
-                                    onClick={() => {
-                                        cartdata(key.id, key.name, key.price, key.description, key.image);
-                                    }}
-                                    id="btn"
-                                    style={{
-                                        borderRadius: "40px",
-                                        padding: "10px 20px",
-                                        border: "1px solid #ccc",
-                                        backgroundColor: "black",
-                                        fontSize: "0.9rem", // Adjusted for smaller screens
-                                    }}
-                                >
-                                    Buy now
-                                </Button>
-                            </Card.Title>
+                        {/* Card Description and Price */}
+                        <Card.Text className="mt-3" style={{ fontSize: "1rem" }}>
+                            {key.description} &nbsp; &nbsp; &nbsp;
+                            <FaRupeeSign /> {key.price}
+                        </Card.Text>
 
-                            {/* Card Description and Price */}
-                            <Card.Text className="mt-3" style={{ fontSize: "1rem" }}>
-                                {key.description} &nbsp; &nbsp; &nbsp;
-                                <FaRupeeSign /> {key.price}
-                            </Card.Text>
-
-                            {/* Icon Section */}
-                            <div id="shopicon" className="d-flex justify-content-between flex-wrap mt-4">
-                                <div className="text-center" style={{ minWidth: "80px" }}>
-                                    <img
-                                        src="https://greenshift-road.myshopify.com/cdn/shop/files/Emission-icon.svg?v=1694095411"
-                                        alt="Duration Icon"
-                                        style={{ width: "40px", height: "40px" }}
-                                    />
-                                    <div style={{ fontSize: "0.9rem" }}>
-                                        Duration <br />
-                                        6 hrs
-                                    </div>
-                                </div>
-                                <div className="text-center" style={{ minWidth: "80px" }}>
-                                    <img
-                                        src="https://greenshift-road.myshopify.com/cdn/shop/files/Range-icon.svg?v=1694093594"
-                                        alt="Range Icon"
-                                        style={{ width: "40px", height: "40px" }}
-                                    />
-                                    <div style={{ fontSize: "0.9rem" }}>
-                                        Range <br />
-                                        126 km
-                                    </div>
-                                </div>
-                                <div className="text-center" style={{ minWidth: "80px" }}>
-                                    <img
-                                        src="https://greenshift-road.myshopify.com/cdn/shop/files/Battery-icon.svg?v=1694093243"
-                                        alt="Battery Icon"
-                                        style={{ width: "40px", height: "40px" }}
-                                    />
-                                    <div style={{ fontSize: "0.9rem" }}>
-                                        Battery <br />
-                                        77 kWh
-                                    </div>
+                        {/* Icon Section */}
+                        <div id="shopicon" className="d-flex justify-content-between flex-wrap mt-4">
+                            <div className="text-center" style={{ minWidth: "80px" }}>
+                                <img
+                                    src="https://greenshift-road.myshopify.com/cdn/shop/files/Emission-icon.svg?v=1694095411"
+                                    alt="Duration Icon"
+                                    style={{ width: "40px", height: "40px" }}
+                                />
+                                <div style={{ fontSize: "0.9rem" }}>
+                                    Duration <br />
+                                    6 hrs
                                 </div>
                             </div>
-                        </Card.Body>
-                    </Card>
-                </div >
+                            <div className="text-center" style={{ minWidth: "80px" }}>
+                                <img
+                                    src="https://greenshift-road.myshopify.com/cdn/shop/files/Range-icon.svg?v=1694093594"
+                                    alt="Range Icon"
+                                    style={{ width: "40px", height: "40px" }}
+                                />
+                                <div style={{ fontSize: "0.9rem" }}>
+                                    Range <br />
+                                    126 km
+                                </div>
+                            </div>
+                            <div className="text-center" style={{ minWidth: "80px" }}>
+                                <img
+                                    src="https://greenshift-road.myshopify.com/cdn/shop/files/Battery-icon.svg?v=1694093243"
+                                    alt="Battery Icon"
+                                    style={{ width: "40px", height: "40px" }}
+                                />
+                                <div style={{ fontSize: "0.9rem" }}>
+                                    Battery <br />
+                                    77 kWh
+                                </div>
+                            </div>
+                        </div>
+                    </Card.Body>
+                </Card>
             </>
         )
     })
@@ -170,7 +167,6 @@ const Shop = () => {
         if (key.price >= lowPrice && key.price <= highPrice) {
             return (
                 <>
-                 <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={key.id}>
                     <Card
                         className="shadow-lg mb-4" // Added margin for spacing between cards
                         key={key.id}
@@ -272,7 +268,6 @@ const Shop = () => {
                             </div>
                         </Card.Body>
                     </Card>
-                    </div>
                 </>
             )
         }
@@ -320,7 +315,7 @@ const Shop = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <div id="shopitemshow" >
+           <div id="shopitemshow" >
                 {showFilter ? ans : ans1}</div>
         </>
     )
