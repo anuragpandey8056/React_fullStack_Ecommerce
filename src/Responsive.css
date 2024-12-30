@@ -4,59 +4,43 @@
     #navbar {
         display: flex;
         flex-direction: column;
-        /* Adjust layout to fit smaller screens */
         align-items: center;
-        /* Center items */
         background-color: rgba(0, 0, 0, 0.8);
-        /* Maintain background color */
         padding: 10px;
-        /* Add some padding */
+       
     }
 
     .navbar-brand {
         margin-left: 0;
-        /* Remove large margins */
         margin-top: 10px;
-        /* Adjust for spacing */
+        
     }
 
     #searchlogo {
         margin-left: 50;
-        /* Center search logo */
         margin-top: 15px;
-        /* Adjust spacing */
         font-size: 18px;
-        /* Slightly reduce size for smaller screens */
     }
 
     #cartqnty {
         top: 20px;
-        /* Adjust position for smaller screens */
         right: 20px;
-        /* Ensure it doesn’t overflow */
     }
 
     #first {
         flex-direction: column;
-        /* Stack content vertically */
         align-items: flex-start;
-        /* Align to the left for readability */
         padding: 10px;
-        /* Adjust padding */
     }
 
     #search-bar {
         width: 100%;
-        /* Take full width available */
         max-width: 300px;
-        /* Limit the maximum width */
         margin: 0 auto;
-        /* Center the search bar */
     }
 
     #search-bar input {
         font-size: 14px;
-        /* Slightly larger text for better readability */
     }
 
 
@@ -105,7 +89,9 @@
     /* ===================shop.jsx==== */
     #shopitemshow {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        transition: 0.2s;
         background-color: #1b1b1b;
     }
 
@@ -236,8 +222,8 @@
 
     /* ===================shop.jsx==== */
     #shopitemshow {
-        display: grid;
-        grid-template-columns: auto auto;
+       
+        grid-template-columns: 1fr 1fr;
         background-color: #1b1b1b;
     }
 
@@ -248,7 +234,7 @@
     }
 
     #aboutsec2 img {
-        width: 95%; /* Scale the image down */
+        width: 95%;
     }
 
     #aboutsec3 {
@@ -663,8 +649,11 @@
 
     /* ===================shop.jsx==== */
     #shopitemshow {
-        display: grid;
-        grid-template-columns: auto;
+       
+       
+        grid-template-columns: 1fr 1fr;
+            
+        
         background-color: #1b1b1b;
     }
 

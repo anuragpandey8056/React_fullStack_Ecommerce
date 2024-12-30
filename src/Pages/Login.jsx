@@ -3,6 +3,10 @@ import myvdo from "../Images/vedio.mp4";
 import { Button } from "@material-tailwind/react";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
+import { IoIosHome } from "react-icons/io";
+import { Link } from "react-router-dom";
+
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -86,6 +90,8 @@ const Login = () => {
               <Form.Control
                 type="email"
                 value={email}
+                required
+
                 onChange={handleInputChange(setEmail)}
                 placeholder="Enter email"
                 style={{
@@ -108,6 +114,8 @@ const Login = () => {
               </Form.Label>
               <Form.Control
                 type="password"
+                required
+                
                 value={password}
                 onChange={handleInputChange(setPassword)}
                 placeholder="Enter password"
@@ -119,6 +127,13 @@ const Login = () => {
                 }}
               />
             </Form.Group>
+            {/* <div>
+            <a href=""><  li>Forget Password</li></a>
+            
+            <Link to="home"><li><IoIosHome style={{fontSize:"24px",color:"black",listStyleType:"none"}} /></li></Link>
+            </div> */}
+                                 
+            
 
             {/* Submit Button */}
             <Button

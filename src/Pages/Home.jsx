@@ -15,6 +15,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { MdPayment } from "react-icons/md";
 import { SlEarphonesAlt } from "react-icons/sl";
 import { MdHomeRepairService } from "react-icons/md";
+import { Row,Col } from "react-bootstrap";
 const Home = () => {
     const [mydata, setmydata] = useState([]);
     const [hoverStates, setHoverStates] = useState({});
@@ -82,10 +83,10 @@ const Home = () => {
             <>
 
                 <Card
-                    
-                   
+
+
                     className="shadow-lg_card-custom border-0 m-3 "
-                    
+
                     key={key.id}
                     onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage)}
                     onMouseLeave={() => handleMouseLeave(key.id, key.image)}
@@ -95,10 +96,10 @@ const Home = () => {
                         src={hoverStates[key.id]}
                         className="card-img-custom"
                     />
-                    <Card.Body  className="card-body-custom">
-                        <Card.Title style={{color:"white"}}  >{key.name}</Card.Title>
-                        <Card.Text style={{color:"white"}} className="card-text-custom">
-                            {key.description }
+                    <Card.Body className="card-body-custom">
+                        <Card.Title style={{ color: "white" }}  >{key.name}</Card.Title>
+                        <Card.Text style={{ color: "white" }} className="card-text-custom">
+                            {key.description}
                         </Card.Text>
                         <div className="shop-icon-container">
                             <div className="shop-icon">
@@ -158,7 +159,7 @@ const Home = () => {
                         <Carousel.Caption id="corosoltxt"  >
                             <h1>Smooth Ride,Go Green With Our Certified E-Vechiles</h1>
                             <Button id="btncorosol1" color="green" >Shop now</Button>
-                            <Button id="btncorosol2"color="white" >Read more</Button>
+                            <Button id="btncorosol2" color="white" >Read more</Button>
 
                         </Carousel.Caption >
                     </Carousel.Item>
@@ -179,14 +180,14 @@ const Home = () => {
                             <h1>Smooth Ride,Go Green With Our Certified E-Vechiles</h1>
 
                             <Button id="btncorosol1" color="green"  >Shop now</Button>
-                            <Button id="btncorosol2"  color="white">Read more</Button>
+                            <Button id="btncorosol2" color="white">Read more</Button>
 
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
 
             </section>
-{/*================================================================================================================================= */}
+            {/*================================================================================================================================= */}
             <div id="div1">
                 <div id="sondiv1">
                     <h1>Spark your Ride With Electric Power</h1>
@@ -219,7 +220,7 @@ const Home = () => {
                 <div id="sondiv4">
                     <Button id="btnsondiv4" >Buy now</Button>
                     <div id="linebtn" ></div>
-                    <Button  id="btnsondiv5" >Read more</Button>
+                    <Button id="btnsondiv5" >Read more</Button>
                 </div>
                 <div>
 
@@ -262,29 +263,60 @@ const Home = () => {
                 </div>
                 {/* ===========================================================corosol */}
                 <section>
-                    <Carousel controls={false}>
-                        <Carousel.Item id='corosolimg7'>
-                            <img src={p1} alt="" />
-                            <Carousel.Caption className="carousel-caption-custom">
+                    <Carousel controls={false} className="carousel slide w-100">
+                        <Carousel.Item>
+                            <img
+                                src={p1}
+                                className="d-block w-100"
+                                alt="Slide 1"
+                                style={{
+                                    objectFit: "cover",
+                                    maxHeight: "100vh", // Ensures the image doesn't overflow the screen
+                                }}
+                            />
+                            <Carousel.Caption className="text-center">
                                 <p className="carousel-caption-text">Ultra high performance</p>
-                                <h1 className="carousel-heading">0-40 kmph <br /> In 6.8sec**</h1>
+                                <h1 className="carousel-heading">
+                                    0-40 kmph <br /> In 6.8sec**
+                                </h1>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item id='corosolimg4'>
-                            <img src={p2} alt="" />
-                            <Carousel.Caption className="carousel-caption-custom">
+                        <Carousel.Item>
+                            <img
+                                src={p2}
+                                className="d-block w-100"
+                                alt="Slide 2"
+                                style={{
+                                    objectFit: "cover",
+                                    maxHeight: "100vh",
+                                }}
+                            />
+                            <Carousel.Caption className="text-center">
                                 <p className="carousel-caption-text">Swift speed</p>
-                                <h1 className="carousel-heading">3-Hour <br /> Rapid charging</h1>
+                                <h1 className="carousel-heading">
+                                    3-Hour <br /> Rapid charging
+                                </h1>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item id='corosolimg5'>
-                            <img src={p3} alt="" />
-                            <Carousel.Caption className="carousel-caption-custom">
+                        <Carousel.Item>
+                            <img
+                                src={p3}
+                                className="d-block w-100"
+                                alt="Slide 3"
+                                style={{
+                                    objectFit: "cover",
+                                    maxHeight: "100vh",
+                                }}
+                            />
+                            <Carousel.Caption className="text-center">
                                 <p className="carousel-caption-text">Power unleashed</p>
-                                <h1 className="carousel-heading">72-V Dominance <br /> Astounding power</h1>
+                                <h1 className="carousel-heading">
+                                    72-V Dominance <br /> Astounding power
+                                </h1>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
+
 
                     <div id="text">
                         <div className="feature-block">
@@ -343,9 +375,9 @@ const Home = () => {
                                 <Button id="btn1" color="green">Buy now</Button>
                             </Card.ImgOverlay>
                         </Card>
-                        <Card  className="w-50 bg-dark text-white ms-2 m-4">
+                        <Card className="w-50 bg-dark text-white ms-2 m-4">
                             <Card.Img
-                                 id="CXimg"
+                                id="CXimg"
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/files/grid-banner.jpg?v=1694088149&width=1500"
                                 alt="Card image"
@@ -364,7 +396,7 @@ const Home = () => {
 
                 <section id="card2quantam" >
                     <div className="d-flex">
-                        <Card   className="w-50 bg-dark text-white me-2 m-4">
+                        <Card className="w-50 bg-dark text-white me-2 m-4">
                             <Card.Img
                                 id="qunatamuppercard"
                                 variant="top"
@@ -418,10 +450,10 @@ const Home = () => {
                                     </div>
                                 </Card.Text>
                                 <div id="button350w">
-                                    <Button style={{marginBottom:"5px"}} className="product-option-button py-2 px-4">350W</Button>
+                                    <Button style={{ marginBottom: "5px" }} className="product-option-button py-2 px-4">350W</Button>
                                     <Button className="product-option-button py-2 px-4">550W</Button>
                                 </div>
-                                <div id="addtoooo"  className="product-button-container flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center items-center">
+                                <div id="addtoooo" className="product-button-container flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center items-center">
                                     <Button className="add-to-cart-button w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded text-center"> <center>Add to cart</center> </Button>
                                     <Button className="buy-now-button w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center">Buy now</Button>
                                 </div>
@@ -437,80 +469,82 @@ const Home = () => {
                     </div>
                 </section>
 
-                
-                    <div id="card-container">
-                        {/* Larger card */}
-                        <div >
-                            <div className="card-large">
-                                <img
-                                    src="https://greenshift-road.myshopify.com/cdn/shop/articles/Blog_04_Electric_Scooter_Accessories.jpg?v=1698312339&width=1000"
-                                    alt="Electric Scooter Accessories"
-                                />
-                            </div>
-                        </div>
 
-                        {/* Middle card */}
-                        <div >
-                            <div className="card-small">
-                                <img
-                                    src="https://greenshift-road.myshopify.com/cdn/shop/articles/Blog_06_Consider_When_Buying_an_Electric_Scooter.jpg?v=1698312003&width=1000"
-                                    alt="Buying an Electric Scooter"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Last card */}
-                        <div>
-                            <div className="card-small">
-                                <img
-                                    src="https://greenshift-road.myshopify.com/cdn/shop/articles/Blog_05_Electric_Scooters_for_Heavy_Adults.jpg?v=1698311291&width=1000"
-                                    alt="Electric Scooters for Heavy Adults"
-                                />
-                            </div>
+                <div id="card-container">
+                    {/* Larger card */}
+                    <div >
+                        <div className="card-large">
+                            <img
+                                src="https://greenshift-road.myshopify.com/cdn/shop/articles/Blog_04_Electric_Scooter_Accessories.jpg?v=1698312339&width=1000"
+                                alt="Electric Scooter Accessories"
+                            />
                         </div>
                     </div>
-                
+
+                    {/* Middle card */}
+                    <div >
+                        <div className="card-small">
+                            <img
+                                src="https://greenshift-road.myshopify.com/cdn/shop/articles/Blog_06_Consider_When_Buying_an_Electric_Scooter.jpg?v=1698312003&width=1000"
+                                alt="Buying an Electric Scooter"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Last card */}
+                    <div>
+                        <div className="card-small">
+                            <img
+                                src="https://greenshift-road.myshopify.com/cdn/shop/articles/Blog_05_Electric_Scooters_for_Heavy_Adults.jpg?v=1698311291&width=1000"
+                                alt="Electric Scooters for Heavy Adults"
+                            />
+                        </div>
+                    </div>
+                </div>
+
 
                 <section id="four-cards">
-                    <Card id="card-width" style={{ backgroundColor: "#1b1b1b", color: "white" }}>
-                        <Card.Body className="card-body">
-                            <TbTruckDelivery className="icon" />
-                            <Card.Title>Fastest Delivery</Card.Title>
-                            <Card.Text>
-                                Delivery order within 24hrs
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                    <Row className="g-4"> {/* Responsive row with spacing */}
+                        <Col xs={12} sm={6} md={3}> {/* Adjust columns for different screen sizes */}
+                            <Card style={{ backgroundColor: "#1b1b1b", color: "white" }}>
+                                <Card.Body className="text-center"> {/* Center-align content */}
+                                    <TbTruckDelivery className="icon" style={{ fontSize: "2rem" }} /> {/* Icon size */}
+                                    <Card.Title>Fastest Delivery</Card.Title>
+                                    <Card.Text>Delivery order within 24hrs</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
 
-                    <Card id="card-width" style={{ backgroundColor: "#1b1b1b", color: "white" }}>
-                        <Card.Body className="card-body">
-                            <MdPayment className="icon" />
-                            <Card.Title>Secure Payments</Card.Title>
-                            <Card.Text>
-                                Payment protected by Buildesk Pro
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                        <Col xs={12} sm={6} md={3}>
+                            <Card style={{ backgroundColor: "#1b1b1b", color: "white" }}>
+                                <Card.Body className="text-center">
+                                    <MdPayment className="icon" style={{ fontSize: "2rem" }} />
+                                    <Card.Title>Secure Payments</Card.Title>
+                                    <Card.Text>Payment protected by Buildesk Pro</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
 
-                    <Card id="card-width" style={{ backgroundColor: "#1b1b1b", color: "white" }}>
-                        <Card.Body className="card-body">
-                            <SlEarphonesAlt className="icon" />
-                            <Card.Title>24*7 Support</Card.Title>
-                            <Card.Text>
-                                Customer service active 24*7
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                        <Col xs={12} sm={6} md={3}>
+                            <Card style={{ backgroundColor: "#1b1b1b", color: "white" }}>
+                                <Card.Body className="text-center">
+                                    <SlEarphonesAlt className="icon" style={{ fontSize: "2rem" }} />
+                                    <Card.Title>24*7 Support</Card.Title>
+                                    <Card.Text>Customer service active 24*7</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
 
-                    <Card id="card-width" style={{ backgroundColor: "#1b1b1b", color: "white" }}>
-                        <Card.Body className="card-body">
-                            <MdHomeRepairService className="icon" />
-                            <Card.Title>Trustworthy Service</Card.Title>
-                            <Card.Text>
-                                Trustworthy and reliable service provided
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                        <Col xs={12} sm={6} md={3}>
+                            <Card style={{ backgroundColor: "#1b1b1b", color: "white" }}>
+                                <Card.Body className="text-center">
+                                    <MdHomeRepairService className="icon" style={{ fontSize: "2rem" }} />
+                                    <Card.Title>Trustworthy Service</Card.Title>
+                                    <Card.Text>Trustworthy and reliable service provided</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
                 </section>
             </div>
         </>

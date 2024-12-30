@@ -74,7 +74,7 @@ const Shop = () => {
         return (
             <>
                 <Card
-                    className="shadow-lg mb-4" // Added margin for spacing on small screens
+                    className="shadow-lg mb-3" // Added margin for spacing on small screens
                     key={key.id}
                     id="shopcard"
                     onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage)}
@@ -104,13 +104,7 @@ const Shop = () => {
                                     cartdata(key.id, key.name, key.price, key.description, key.image);
                                 }}
                                 id="btn"
-                                style={{
-                                    borderRadius: "40px",
-                                    padding: "10px 20px",
-                                    border: "1px solid #ccc",
-                                    backgroundColor: "black",
-                                    fontSize: "0.9rem", // Adjusted for smaller screens
-                                }}
+                                className="w-full sm:w-auto rounded-full px-3 py-2 border border-gray-300 bg-black text-white text-xs sm:text-sm md:text-base lg:text-lg hover:bg-gray-700 transition-all duration-300 ease-in-out"
                             >
                                 Buy now
                             </Button>
@@ -315,8 +309,9 @@ const Shop = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-           <div id="shopitemshow" >
-                {showFilter ? ans : ans1}</div>
+            <div id="shopitemshow" >
+                {showFilter ? ans : ans1}
+            </div>
         </>
     )
 }

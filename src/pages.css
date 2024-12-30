@@ -1,11 +1,12 @@
 /* shop.jsx================================================= */
-#shopcard{
-    width: 30rem;
-    border: black;
-    margin: 10px ;
-    transition: 0.3s;
-    flex-wrap: wrap;
-}
+
+#shopcard {
+    
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
 #shopidbody{
     background-color: #1b1b1b;
     color: white;
@@ -23,7 +24,7 @@
 }
 #shopitemshow{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     background-color: #1b1b1b;
 }
 #filter{
@@ -133,30 +134,30 @@
 /* cart.jsx========================================== */
 
 #carttr1 {
-    margin: 20px 20px; /* Adjusted for better spacing */
+    margin: 20px 20px; 
     border: none;
     border-bottom: 0.5px solid rgb(196, 193, 193);
 }
 #carttd1 {
-    padding-right: 20px; /* Adjusted for smaller screens */
+    padding-right: 20px; 
     background-color: #1b1b1b;
     color: white;
     border: none;
 }
 #carddiv1 {
     background-color: #1b1b1b;
-    padding: 50px 20px; /* Reduced padding for smaller screens */
+    padding: 50px 20px; 
 }
 #carddiv2 {
     background-color: #1b1b1b;
     color: white;
-    margin: 20px 10px; /* Adjusted margins for smaller screens */
+    margin: 20px 10px; 
 }
 #carddiv3 {
     border: none;
     display: flex;
-    justify-content: space-between; /* Adjust spacing for smaller screens */
-    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; 
+    flex-wrap: wrap;
     margin-bottom: 30px;
 }
 #carddiv4 {
@@ -173,13 +174,13 @@
 }
 #carddiv5 {
     display: flex;
-    flex-direction: column; /* Stack items on smaller screens */
+    flex-direction: column; 
     align-items: center;
-    gap: 20px; /* Spacing between elements */
+    gap: 20px; 
 }
 #cardformcntrl {
-    padding: 15px; /* Adjusted for smaller screens */
-    width: 90%; /* Full width on smaller screens */
+    padding: 15px; 
+    width: 90%; 
     background-color: black;
     color: white;
     border: none;
@@ -191,28 +192,28 @@
     justify-content: space-between;
 }
 #carddiv7 {
-    margin-right: 10px; /* Adjusted for smaller screens */
+    margin-right: 10px; 
 }
 #carddiv8 {
     color: white;
     margin-bottom: 10px;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center; 
 }
 #carddiv9 {
     margin-bottom: 10px;
 }
 #carddivbutton {
     border-radius: 40px;
-    padding: 10px 20px; /* Adjusted for smaller screens */
+    padding: 10px 20px; 
     background-color: limegreen;
     color: black;
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; 
 }
 #carddivbutton2 {
     background-color: black;
-    display: flex; /* Flexbox container */
-    justify-content: center; /* Horizontally centers the content */
-    align-items: center; /* Vertically centers the content */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
     padding: 10px;
 }

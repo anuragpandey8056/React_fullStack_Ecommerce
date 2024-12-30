@@ -91,15 +91,8 @@ const Topmenu = () => {
   const toggleSearch = () => {
     setSearchActive(!searchActive);
   };
-
-
-
   return (
     <>
-
-
-
-
       <Navbar id='navbar' expand="lg">
         <Container>
 
@@ -107,7 +100,6 @@ const Topmenu = () => {
           <Nav className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll
-
           >
             <Nav.Link as={Link} to="home" style={{ color: "green" }}>Home</Nav.Link>
             <Nav.Link as={Link} to="shop" style={{ color: "white" }} id='nav'>Shop</Nav.Link>
@@ -125,7 +117,6 @@ const Topmenu = () => {
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
-
           <nav id='searchlogo' style={{ display: "flex", alignItems: "center", gap: "3px" }}>
             {searchActive ? (
               <div id="container">
@@ -165,11 +156,12 @@ const Topmenu = () => {
 
               <Dropdown.Menu style={{ backgroundColor: "#1b1b1b", color: "green" }}>
                 <Dropdown.Item onClick={handleShow} style={{ color: "green" }}>Admin login</Dropdown.Item>
-                <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/register") }}>Login</Dropdown.Item>
+                <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Login</Dropdown.Item>
+                <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/register") }}>Register</Dropdown.Item>
+
                 <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-
             <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }}><MdOutlineShoppingBag /></Nav.Link>
           </nav>
           <div id='cartqnty'>{cartlen}</div>

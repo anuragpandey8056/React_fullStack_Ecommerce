@@ -28,29 +28,30 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="shop" element={<Shop />} />
             <Route path="cart" element={<Mycart />} />
             <Route path="About" element={<About />} />
-            <Route path="search" element={<Search/>}/>
+            <Route path="search" element={<Search />} />
             <Route path="model" element={<Model />} />
             <Route path="contact" element={<Contact />} />
             <Route path="/checkout/:amt" element={<Checkout />} />
-            <Route path="paymentdone" element={<PaymentDone />}/>
-            <Route path="/dashboard/home" element={<Home/>}/>
-            <Route path="/shop/productdetail/:id" element={<ProductDetail/>}/>
-            <Route path="/search/productdetail/:id" element={<Search/>}/>
+            <Route path="paymentdone" element={<PaymentDone />} />
+            <Route path="/dashboard/home" element={<Home />} />
+            <Route path="/shop/productdetail/:id" element={<ProductDetail />} />
+            <Route path="/search/productdetail/:id" element={<Search />} />
 
 
-            
+
           </Route>
-          <Route path="/dashboard/logout" element={<Login/>}/>
-          <Route index element={<Register />} />
+          <Route path="/dashboard/logout" element={<Login />} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
 
           <Route path="dashboard" element={<Dashboard />}>
-          <Route index element={<Dashhome />} />
+            <Route index element={<Dashhome />} />
 
             <Route path="insert" element={<Insert />} />
             <Route path="oderhistory" element={<OrderPlaced />} />

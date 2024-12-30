@@ -69,6 +69,7 @@ const Register = () => {
                   <Form.Label>Email Address</Form.Label>
                   <Form.Control
                     type="email"
+                    required
                     value={email}
                     onChange={handleInputChange(setEmail)}
                     placeholder="Enter email"
@@ -80,6 +81,8 @@ const Register = () => {
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
+                    required
+
                     value={password}
                     onChange={handleInputChange(setPassword)}
                     placeholder="Enter password"
@@ -91,6 +94,8 @@ const Register = () => {
                   <Form.Label>Confirm Password</Form.Label>
                   <Form.Control
                     type="password"
+                    required
+
                     value={confirmPassword}
                     onChange={handleInputChange(setConfirmPassword)}
                     placeholder="Confirm password"

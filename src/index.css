@@ -74,35 +74,35 @@ body {
 #dropdown-account {
     display: flex;
     align-items: center;
-    font-size: 1.3rem; /* Consistent size for the icon */
+    font-size: 1.3rem; 
     cursor: pointer;
-    margin-left: 30px; /* Space it properly from other elements */
+    margin-left: 30px; 
 }
 
 #dropdown-account svg {
-    margin-right: 5px; /* Optional: Add space between icon and text if needed */
+    margin-right: 5px;
 }
 
 .dropdown-menu {
-    background-color: #1b1b1b; /* Consistent dropdown background */
+    background-color: #1b1b1b; 
     color: green;
-    border: none; /* Remove border if present */
+    border: none; 
 }
 
 .dropdown-item {
     color: green;
     display: flex;
-    align-items: center; /* Ensures items align vertically */
-    gap: 5px; /* Adds space between icon and text */
+    align-items: center;
+    gap: 5px; 
 }
 
 .dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Hover effect for better UX */
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 #dropdown-account,
 .dropdown-item {
-    vertical-align: middle; /* Ensures both elements are at the same vertical alignment */
+    vertical-align: middle; 
 }
 
 #first {
@@ -167,10 +167,6 @@ body {
 }
 #navbar {
     background-color: rgba(0, 0, 0, 0.5);
-    /* overflow-x: hidden; */
-   
-
-
 }
 
 .nav-link {
@@ -201,24 +197,18 @@ body {
 
 #cartqnty {
     border-radius: 50%;
-    /* Makes it a circle */
     border: 2px solid red;
-    /* Red border */
     width: 13px;
-    /* Equal width */
     height: 13px;
-    /* Equal height */
     display: flex;
-    /* Optional: Centers content */
     align-items: center;
-    /* Optional: Centers content vertically */
     justify-content: center;
     text-align: center;
     background-color: red;
     color: black;
     position: absolute;
-    top: 25px;
-    right: 114px;
+    top: 23px;
+    right: 200px;
     z-index: 6;
 
 }
@@ -226,7 +216,6 @@ body {
 
 
 /* ================HOME.jsx====================================================================================== */
-/* Card container */
 
 .card-custom {
     width: 25rem;
@@ -454,15 +443,11 @@ body {
     padding: 10px 100px;
     background-color: black;
 }
-
-/* Layout for add to cart and buy now buttons */
 .product-button-container {
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
 }
-
-/* Icon container styling */
 #addtocardbanner {
     display: flex;
     justify-content: space-around;
@@ -568,7 +553,6 @@ body {
 
 #four-cards .card-body {
     padding: 1.25rem;
-    /* Equivalent to 20px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -577,7 +561,6 @@ body {
 
 #four-cards .icon {
     font-size: 1.75rem;
-    /* Equivalent to 28px */
     margin-bottom: 1rem;
 }
 
@@ -589,13 +572,9 @@ body {
 #four-cards .card-text {
     font-size: 1rem;
 }
-
-/* Specific background colors */
 #bg-dark {
     background-color: #1b1b1b;
 }
-
-/* Card widths */
 #card-width {
     width: 18rem;
 }
@@ -614,16 +593,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;  /* Make the SVG responsive */
+    width: 100%;  
     height: 600px;
-    margin: 0; /* Remove any default margin */
+    margin: 0; 
     padding: 200px 200px 200px 200px;
 }
 
 #svg {
     transform-origin: center;
-    animation: spin 2s linear infinite; /* Rotate the entire SVG */
-    width: 200px;  /* Fixed size */
+    animation: spin 2s linear infinite; 
+    width: 200px; 
     height: auto;
 }
 
