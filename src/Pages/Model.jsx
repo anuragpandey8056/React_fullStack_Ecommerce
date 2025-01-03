@@ -111,7 +111,7 @@ const Model = () => {
 
                             </Card.Body>
                         </Card>
-                        <Card  id='modelcardbody'>
+                        <Card  style={{ width: "25rem", border: "none" }}>
                             <Card.Img
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/collections/Product_18.jpg?v=1699514343"

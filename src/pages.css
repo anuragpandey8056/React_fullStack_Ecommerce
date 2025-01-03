@@ -114,8 +114,9 @@
 }
 #modeldiv1{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns:auto auto auto;
     gap: 1rem;
+    overflow: hidden;
 }
 #modelcardbody{
     background-color: #1b1b1b;

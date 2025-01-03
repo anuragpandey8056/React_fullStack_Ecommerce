@@ -256,8 +256,7 @@
 
     /* mode;.jsx */
     #modeldiv1  {
-        display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto ;
         gap: 1rem;
     }
 
@@ -451,8 +450,8 @@
 
     /* mode.jsx================ */
     #modeldiv1 {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+    
+        grid-template-columns: auto auto ;
 
         gap: 1rem;
     }
@@ -683,11 +682,16 @@
 
 
     /* model.jsx=================== */
-    #modeldiv1 {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-
-        gap: 1rem;
+   
+   
+    #modeldiv1{
+       
+       
+        grid-template-columns: auto ;
+            
+      
+        
+        background-color: #1b1b1b;
     }
 
     #modelcardbtn {
