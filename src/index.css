@@ -206,11 +206,14 @@ body {
     text-align: center;
     background-color: red;
     color: black;
-    position: absolute;
-    top: 23px;
-    right: 200px;
+    position: relative;
+    left: 30px;
+     
     z-index: 6;
 
+}
+#cardshoppingandlength{
+    margin-bottom: 20px;
 }
 
 

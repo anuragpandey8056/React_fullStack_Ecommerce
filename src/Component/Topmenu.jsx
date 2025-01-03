@@ -7,6 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { Button } from "@material-tailwind/react";
 import { useNavigate } from 'react-router-dom';
 
+
 // Icons
 import { CiSearch } from "react-icons/ci";
 import { VscAccount } from "react-icons/vsc";
@@ -18,6 +19,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 import React from 'react';
+
 
 import {
   MDBBtn,
@@ -33,6 +35,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import axios from 'axios';
 // import Search from 'antd/es/transfer/search';
 import { searchbox } from '../Slice';
+import { Alert } from 'antd';
 
 const Topmenu = () => {
   const dispatch = useDispatch();
@@ -91,6 +94,14 @@ const Topmenu = () => {
   const toggleSearch = () => {
     setSearchActive(!searchActive);
   };
+
+  const cartlenres=()=>{
+    if(cartlen<=0){
+      alert("No item inside the cart"); 
+    }
+  }
+
+  
   return (
     <>
       <Navbar id='navbar' expand="lg">
@@ -162,9 +173,15 @@ const Topmenu = () => {
                 <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }}><MdOutlineShoppingBag /></Nav.Link>
+            <div id='cardshoppingandlength'>
+              <div id='cartqnty'>{cartlen}</div>
+
+              
+
+              <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }} onClick={()=>{cartlenres()}}><MdOutlineShoppingBag /></Nav.Link>
+
+            </div>
           </nav>
-          <div id='cartqnty'>{cartlen}</div>
 
         </Container>
       </Navbar>

@@ -42,9 +42,9 @@
       "id": "2",
       "name": "Aqua shine smart",
       "price": 120000,
-      "description": "urban Commuting Evolution",
-      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533",
-      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.2.jpg?v=1698049176&width=533"
+      "description": "urban Commuting Evolution", 
+      "image":"https://greenshift-road.myshopify.com/cdn/shop/files/Product9.jpg?v=1698647979&width=533 ",
+      "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product9.1.jpg?v=1698647979&width=533"
     },
     {
       "id": "3",
@@ -144,7 +144,7 @@
     },
     {
       "id": "12",
-      "name": "Electric Scotter",
+      "name": "AquaSync Smart Water Bottle",
       "price": 14500,
       "description": "charging convienence included",
       "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product19.jpg?v=1698661739&width=533",
