@@ -76,15 +76,9 @@ const Home = () => {
     };
     const ans = mydata.map((key) => {
         return (
-
-
-
-
             <>
 
                 <Card
-
-
                     className="shadow-lg_card-custom border-0 m-3 "
 
                     key={key.id}
@@ -107,7 +101,7 @@ const Home = () => {
                                 <div>
                                     <img
                                         src="https://greenshift-road.myshopify.com/cdn/shop/files/Emission-icon.svg?v=1694095411"
-                                        alt="Duration Icon" width={"50px"}
+                                        alt="Duration Icon" 
                                     />
                                     Duration <br />
                                     6 hrs
@@ -116,9 +110,10 @@ const Home = () => {
                             <div className="shop-icon">
 
                                 <div>
-                                    <img
+                                <img
                                         src="https://greenshift-road.myshopify.com/cdn/shop/files/Range-icon.svg?v=1694093594"
                                         alt="Range Icon"
+                                        
                                     />
                                     Range <br />
                                     126 km

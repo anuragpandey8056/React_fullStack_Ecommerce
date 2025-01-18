@@ -68,7 +68,7 @@ const Mycart = () => {
                 <tr id="carttr1"  >
 
                     <td id="carttd1" >
-                        <img src={key.image} width="100px" height="100px" alt="Energic QuantumGlide Z3" />
+                        <img src={key.image} width="fit-content"  alt="Energic QuantumGlide Z3" />
                     </td>
                     <td style={{ backgroundColor: "#1b1b1b", color: "white", border: "none" }}>
                         <div>{key.name}</div>

@@ -100,9 +100,7 @@ const Shop = () => {
                         <Card.Title id="shopcardtitle" className="d-flex justify-content-between align-items-center">
                             <div>{key.name}</div>
                             <Button
-                                onClick={() => {
-                                    cartdata(key.id, key.name, key.price, key.description, key.image);
-                                }}
+                                onClick={() => {cartdata(key.id, key.name, key.price, key.description, key.image)}}
                                 id="btn"
                                 className="w-full sm:w-auto rounded-full px-3 py-2 border border-gray-300 bg-black text-white text-xs sm:text-sm md:text-base lg:text-lg hover:bg-gray-700 transition-all duration-300 ease-in-out"
                             >

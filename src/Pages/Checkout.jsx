@@ -233,14 +233,12 @@ const Checkout = () => {
                                                     </form>
                                                 </MDBCardBody>
                                             </MDBCard>
-                                            <div className="text-center">
-                                                <Button onClick={HandleSubmit} style={{ borderRadius: "40px", padding: "0px 150px 0px 150px", backgroundColor: "limegreen", color: "black", }}> <center>Place order</center>  </Button>
-
-                                            </div>
-
+                                            
+                                
 
 
                                         </MDBCol>
+                                      
 
 
 
@@ -289,11 +287,16 @@ const Checkout = () => {
                                                         UPI/Phone Pay
                                                     </label>
                                                 </div>
+                                                
 
                                                 <div className="mt-4">
                                                     {ans1}
 
 
+
+                                                </div>
+                                                <div className="text-center">
+                                                <Button onClick={HandleSubmit} style={{  backgroundColor: "limegreen", color: "black",margin:"15px" }}> <center>Place order</center>  </Button>
 
                                                 </div>
 

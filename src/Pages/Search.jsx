@@ -79,9 +79,10 @@ const Search = () => {
 
     const ans1 = filteredData.map((key) => (
         <Card
+            id="searchcard"
             className="shadow-lg"
             key={key.id}
-            style={{ width: '30rem', border: "black", margin: "10px", transition: "0.3s" }}
+            style={{  border: "black", margin: "10px", transition: "0.3s",overflow: "hidden" }}
             onClick={()=>{ProductDetail(key.id)}}
 
             onMouseEnter={() => handleMouseEnter(key.id, key.hoverimage || key.image)}
@@ -113,7 +114,7 @@ const Search = () => {
     ));
 
     return (
-        <div style={{ display: "grid", gridTemplateColumns: "auto auto auto", backgroundColor: "#1b1b1b" }}>
+        <div id="searchboxshow" style={{ display: "grid", gridTemplateColumns: "repeat(3fr)", backgroundColor: "#1b1b1b" }}>
             {ans1} {/* Display the filtered product cards */}
         </div>
     );

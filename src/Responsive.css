@@ -1,4 +1,5 @@
 /* ============================Home.jsx============================================================================= */
+
 @media(max-width:1280px) {
 
     #navbar {
@@ -9,6 +10,7 @@
         padding: 10px;
        
     }
+  
 
     .navbar-brand {
         margin-left: 0;
@@ -121,22 +123,59 @@
 @media(max-width:768px) {
 
     /* =====================navbar */
+  
     #navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
+        display: none;
+        padding: 10px; 
+        position: absolute;
+        left: -250px;
+        width: 400px;
+        height: 100%; 
+    }
+    #barsicon{
+        display: block;
     }
 
+
+    
+    #cross:checked~#navbar{
+        left:-100px;
+    }
+    #bars:checked~#navbar  {
+        
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        top: 2%;
+        
+        
+       
+    }
+    
+   
+   
+    
+    
+    
+    
+    #content .nav-link{
+        margin: 20px;
+    } 
+
+    .navbar>.container{
+        display: block !important;
+    }
+  
     .navbar-brand {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin: 10px;
+        
     }
 
     #searchlogo {
         margin-left: 0;
         margin-top: 0;
         font-size: 16px;
+        
     }
 
     #cartqnty {
@@ -303,12 +342,58 @@
 
     /* ==============================navbar */
     #navbar {
-        /* padding: 10px; */
-        flex-direction: column;
-    }
+        display: none;
+        padding: 10px; 
+        position: absolute;
+        left: -250px;
+        width: 200px;
+        height: 100%;
+        /* margin-left: -100%; */
+        /* flex-direction: column; */
+        
 
-    .navbar-brand {
-        margin: 0 auto 15px;
+       
+    }
+    #barsicon{
+        display: block;
+    }
+    #bars{
+        font-size: 18px !important;
+    }
+    
+
+    #bars:checked~#navbar  {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        top: 2%;
+        transition: all 5s ease-in-out;
+    }  
+
+    .navbar>.container{
+        display: block !important;
+    }
+    /* .navbarhamber{
+        display: inline-block;
+        cursor: pointer;
+    }
+    #menu-mobile {
+     
+        display: block;
+         position: absolute; 
+        justify-content: center;
+       
+       
+    } */
+
+
+    
+
+   
+  
+
+    .navbar-brand img {
+        margin: 60px ;
     }
 
     #searchlogo {
@@ -329,6 +414,10 @@
     }
 
     /* ===============home=================== */
+    #Homecards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
     .card-custom {
         width: 18rem;
         margin: 5px;
@@ -414,13 +503,21 @@
         padding: 15px;
         text-align: center;
     }
+    #addtocardbanner {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
 
 
 
     /* ===================shop.jsx==== */
     #shopitemshow {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: repeat(2, 1fr);
+
         background-color: #1b1b1b;
     }
 
@@ -494,7 +591,10 @@
     #carddivbutton2 {
         padding: 8px 15px;
     }
-
+/* contact.jsx===================== */
+#contactform{
+    display: block;
+}
   
 
 
@@ -507,7 +607,9 @@
     #navbar {
         padding: 8px;
         flex-direction: column;
-        background-color: #232323dd
+        background-color: #232323dd;
+        overflow-x: hidden;
+        
     }
 
     .navbar-brand {
@@ -521,10 +623,11 @@
     }
 
     #cartqnty {
-        top: 125px;
-        width: 8px;
+        top: 15px;
+        left: 35px;
+        /* width: 8px;
         height: 8px;
-        left: 180px;
+        left: 180px; */
     }
 
     .nav-link {
@@ -532,7 +635,9 @@
         padding: 4px;
     }
     
-
+    #barsicon{
+        display: block;
+    }
 
 
 
@@ -640,6 +745,10 @@
         padding: 10px;
         text-align: center;
     }
+    #Homecards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
     
 
    
@@ -651,7 +760,8 @@
     #shopitemshow {
        
        
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        
             
         
         background-color: #1b1b1b;
@@ -730,6 +840,48 @@
         padding: 5px 10px;
     }
 
+   
+
+}
+@media(max-width:321){
+ /* search .jsx======================== */
+
+ #searchcard{
+    
+    overflow-x: hidden;
+}
+#searchboxshow{
+    display: grid;
+    grid-template-columns: auto  auto;
+    overflow-x: hidden;
+    width:"50%";
+
+}
+#img-top{
+    width: 100%;
+}
+.class-body{
+    width:100%;
+}
+
+
+/* shop.jsx================================= */
+#shopitemshow {
+       
+       
+    grid-template-columns: repeat(1, 1fr);
+    
+        
+    
+    background-color: #1b1b1b;
+}
+/* contact */
+#contactform{
+    display: block;
+}
+#barsicon{
+    display: block;
+}
 }
 
 

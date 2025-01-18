@@ -20,7 +20,7 @@ const PaymentDone = () => {
                         <Loader />
                     </div>
                 ) : (
-                    <h2 align="center" style={{ color: "green", marginBottom: "0px", padding: "200px 200px 200px 200px" }}> Your Order Succesfully Placed <br />
+                    <h2 align="center" style={{ color: "green", padding: "100px" }}> Your Order Succesfully Placed <br />
                         your product will be Arrived within 6 to 7 working days</h2>
                 )}
 

@@ -23,7 +23,7 @@ const Contact = () => {
 
 
 
-                <div style={{display:"flex",justifyContent:"space-between",paddingTop:"75px",color:"white"}}>
+                <div id='contactform' style={{justifyContent:"space-around",paddingTop:"75px",color:"white"}}>
                     <div>
                         <div><h1>Let's discuss</h1></div>
                         <div style={{marginBottom:"50px"}}>Road: where sustainable driving meets a brighter future! As your trusted <br /> electric vehicle supplier, we're here to revolutionize your journey towards <br /> eco-friendly transportation, leaving pollution behind and welcoming a <br /> cleaner, greener commute. With Crafting Clean Beginnings, you can join <br /> the green movement now and improve the environment.</div>
@@ -38,16 +38,16 @@ const Contact = () => {
                     </div>
                     <div>
                         <Form  >
-                            <Form.Group className="mb-3" style={{ width: "400px"}} controlId="exampleForm.ControlInput1">
+                            <Form.Group className="mb-3"  controlId="exampleForm.ControlInput1">
                                 <Form.Control  style={{backgroundColor:"rgb(48, 45, 45) "}}   type="email" placeholder="Name" />
                             </Form.Group>
-                            <Form.Group style={{ width: "400px"}} className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Group  className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Control  style={{backgroundColor:"rgb(48, 45, 45) "}}   type="email" placeholder="E-mail" />
                             </Form.Group>
-                            <Form.Group style={{ width: "400px", }} className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Group  className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Control  style={{backgroundColor:"rgb(48, 45, 45) "}}   type="email" placeholder="Phone no" />
                             </Form.Group>
-                            <Form.Group style={{ width: "400px" }} className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
 
 
                                 <Form.Control  style={{backgroundColor:"rgb(48, 45, 45) "}}   as="textarea" placeholder='Additonal info' rows={3} />

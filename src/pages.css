@@ -114,8 +114,8 @@
 }
 #modeldiv1{
     display: grid;
-    grid-template-columns:auto auto auto;
-    gap: 1rem;
+    grid-template-columns:repeat(3,1fr);
+    gap: 0.3rem;
     overflow: hidden;
 }
 #modelcardbody{
@@ -144,6 +144,9 @@
     background-color: #1b1b1b;
     color: white;
     border: none;
+}
+#carttd1 img{
+    height: 100px;
 }
 #carddiv1 {
     background-color: #1b1b1b;
@@ -275,6 +278,11 @@
     font-size: 1.1rem;
     cursor: pointer;
     text-align: center;
+}
+
+/* contact.jsx */
+#contactform{
+    display: flex;
 }
 
 

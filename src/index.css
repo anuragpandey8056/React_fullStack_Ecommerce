@@ -2,6 +2,7 @@
 
 body {
     font-family: Inter, sans-serif;
+    
 }
 
 
@@ -78,13 +79,16 @@ body {
     cursor: pointer;
     margin-left: 30px; 
 }
+/* .navbarhamber{
+    display: none;
+} */
 
 #dropdown-account svg {
     margin-right: 5px;
 }
 
 .dropdown-menu {
-    background-color: #1b1b1b; 
+    /* background-color: #1b1b1b;  */
     color: green;
     border: none; 
 }
@@ -96,9 +100,9 @@ body {
     gap: 5px; 
 }
 
-.dropdown-item:hover {
+/* .dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.1); 
-}
+} */
 
 #dropdown-account,
 .dropdown-item {
@@ -110,7 +114,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0px 0px 25px 0px;
-    background-color: rgb(207, 206, 204);
+    /* background-color: rgb(207, 206, 204); */
     overflow-x: hidden;
 }
 
@@ -133,7 +137,7 @@ body {
 #search-bar {
     width: 140px; 
     max-width: 400px;
-    background-color: rgb(219, 212, 212);
+    /* background-color: rgb(219, 212, 212); */
 
     align-items: center;
     border-radius: 40px;
@@ -150,6 +154,20 @@ body {
     padding: 6px; 
     font-size: 12px;
 }
+#barsicon{
+    color: #65ef87;
+    font-size: 30px;
+    position: absolute;
+    top: 2%;
+    left: -1%;
+    z-index: 9;
+    display: none;
+    
+   
+}
+#bars{
+    display: none;
+}
 
 #search-bar i {
     border: 0;
@@ -165,9 +183,9 @@ body {
 ::placeholder {
     color: rgb(20, 20, 20);
 }
-#navbar {
+/* #navbar {
     background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .nav-link {
     color: rgb(255, 255, 255);
@@ -191,6 +209,7 @@ body {
     margin-left: 400px;
     margin-top: 10px;
     font-size: 20px;
+    align-items: center;
 }
 
 
@@ -452,8 +471,8 @@ body {
     margin-top: 50px;
 }
 #addtocardbanner {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
     gap: 20px;
     margin: 20px 0;
@@ -729,16 +748,23 @@ body {
 
 #logo:hover {
     color: green;
+    
 
 }
 
 #Homecards {
-    display: flex;
-    justify-content: space-evenly;
+    
+    
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr);
+    
+
+   
+    
 }
 
 #div1icon {
-    div {
+    div {   
 
         display: grid;
         grid-template-columns: auto auto auto;
@@ -758,13 +784,7 @@ body {
 
 }
 
-#addtocardbanner {
 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-bottom: "1px solid  white";
-
-}
 
 #btn:hover {
     border: "1px solid green"

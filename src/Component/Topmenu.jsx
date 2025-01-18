@@ -19,7 +19,8 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 import React from 'react';
-
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 
 import {
   MDBBtn,
@@ -104,13 +105,19 @@ const Topmenu = () => {
   
   return (
     <>
-      <Navbar id='navbar' expand="lg">
+      
+      <label htmlFor="bars" id='barsicon'><  FaBars /></label>
+      <input type="checkbox" id='bars' />
+     
+      
+
+
+      <Navbar id='navbar'  expand="lg">
         <Container>
+         {/* <label htmlFor="cross" id='crossicon'><ImCross /></label>
+          <input type="checkbox" id='cross' /> */}
 
-
-          <Nav className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
+          <Nav id='content' className="me-auto my-2 my-lg-0" navbarScroll
           >
             <Nav.Link as={Link} to="home" style={{ color: "green" }}>Home</Nav.Link>
             <Nav.Link as={Link} to="shop" style={{ color: "white" }} id='nav'>Shop</Nav.Link>
@@ -128,7 +135,7 @@ const Topmenu = () => {
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
-          <nav id='searchlogo' style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+          <nav id='searchlogo' >
             {searchActive ? (
               <div id="container">
                 <form id="search-bar">
@@ -140,11 +147,7 @@ const Topmenu = () => {
                     onChange={handleSearchChange}
                   />
                   <i onClick={SubmitSearch} className="fa-solid fa-magnifying-glass" style={{ cursor: "pointer" }}></i>
-
-
                 </form>
-
-
               </div>
             ) : (
               <Nav.Link
@@ -160,7 +163,6 @@ const Topmenu = () => {
               <Dropdown.Toggle
                 as="div"
                 id="dropdown-account"
-
               >
                 <VscAccount style={{ color: "white", fontSize: "1.3rem", marginLeft: "30px" }} />
               </Dropdown.Toggle>
@@ -175,16 +177,16 @@ const Topmenu = () => {
             </Dropdown>
             <div id='cardshoppingandlength'>
               <div id='cartqnty'>{cartlen}</div>
-
-              
-
               <Nav.Link as={Link} to="cart" style={{ color: "white", fontSize: "1.3rem", marginLeft: "20px" }} onClick={()=>{cartlenres()}}><MdOutlineShoppingBag /></Nav.Link>
-
             </div>
           </nav>
-
         </Container>
       </Navbar>
+      
+
+
+
+
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header style={{ backgroundColor: "#1b1b1b", color: "green", borderBottom: "none" }} closeButton>

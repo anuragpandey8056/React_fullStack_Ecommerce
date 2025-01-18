@@ -35,19 +35,8 @@ const Model = () => {
                 <section
 
                 >
-
-
-
-
-
-
-
-
-
-
-
                     <div id='modeldiv1'  >
-                        <Card style={{ width: "25rem", border: "none" }}>
+                        <Card style={{ border: "none" }}>
                             <Card.Img
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/collections/Product_1.jpg?v=1698332373"
@@ -62,7 +51,7 @@ const Model = () => {
 
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: "25rem", border: "none" }}>
+                        <Card style={{  border: "none" }}>
                             <Card.Img
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/collections/Product_3.jpg?v=1698332493"
@@ -78,7 +67,7 @@ const Model = () => {
 
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: "25rem", border: "none" }}>
+                        <Card style={{  border: "none" }}>
                             <Card.Img
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/collections/Product_8.jpg?v=1698332565"
@@ -94,7 +83,7 @@ const Model = () => {
 
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: "25rem", border: "none" }}>
+                        <Card style={{ border: "none" }}>
                             <Card.Img
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/collections/Product_11.jpg?v=1698332437"
@@ -111,7 +100,7 @@ const Model = () => {
 
                             </Card.Body>
                         </Card>
-                        <Card  style={{ width: "25rem", border: "none" }}>
+                        <Card  style={{ border: "none" }}>
                             <Card.Img
                                 variant="top"
                                 src="https://greenshift-road.myshopify.com/cdn/shop/collections/Product_18.jpg?v=1699514343"
