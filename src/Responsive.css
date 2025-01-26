@@ -134,7 +134,9 @@
     }
     #barsicon{
         display: block;
+        font-size: large;
     }
+
 
 
     
@@ -151,11 +153,6 @@
         
        
     }
-    
-   
-   
-    
-    
     
     
     #content .nav-link{
@@ -354,13 +351,11 @@
 
        
     }
-    #barsicon{
+    #barsicon {
         display: block;
+        font-size: smaller;
     }
-    #bars{
-        font-size: 18px !important;
-    }
-    
+   
 
     #bars:checked~#navbar  {
         display: flex;
@@ -368,30 +363,14 @@
         left: 0;
         top: 2%;
         transition: all 5s ease-in-out;
-    }  
-
+    }
     .navbar>.container{
         display: block !important;
     }
-    /* .navbarhamber{
-        display: inline-block;
-        cursor: pointer;
+    .navbar-brand {
+        margin: 2px;
+        
     }
-    #menu-mobile {
-     
-        display: block;
-         position: absolute; 
-        justify-content: center;
-       
-       
-    } */
-
-
-    
-
-   
-  
-
     .navbar-brand img {
         margin: 60px ;
     }
@@ -621,6 +600,9 @@
         font-size: 12px;
         gap: 5px;
     }
+    #barsicon{
+        font-size: 10px;
+    }
 
     #cartqnty {
         top: 15px;
@@ -635,8 +617,9 @@
         padding: 4px;
     }
     
-    #barsicon{
+     #barsicon {
         display: block;
+        font-size: smaller;
     }
 
 

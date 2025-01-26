@@ -55,7 +55,9 @@ const Topmenu = () => {
 
   const [jsonAdminData, setJsonAdminData] = useState([]);
 
-
+  const data4=localStorage.getItem("data")
+  let convertdata=JSON.parse(data4)
+  console.log(data4)
   const loadData = () => {
     let url = "https://react-jsonserver.onrender.com/AdminLogin";
     axios.get(url).then((resp) => {
@@ -101,6 +103,11 @@ const Topmenu = () => {
       alert("No item inside the cart"); 
     }
   }
+  const logout=() => {
+    alert("Logged out successfully");
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login");
+  }
 
   
   return (
@@ -124,6 +131,8 @@ const Topmenu = () => {
             <Nav.Link as={Link} to="About" style={{ color: "white" }} id='nav'>About</Nav.Link>
             <Nav.Link as={Link} to="model" style={{ color: "white" }} id='nav'>Model</Nav.Link>
             <Nav.Link as={Link} to="contact" style={{ color: "white" }} id='nav'>Contact</Nav.Link>
+            <Nav.Link as={Link} to="apidata" style={{ color: "white" }} id='nav'>Apidata</Nav.Link>
+
           </Nav>
 
           <Navbar.Brand href="#home">
@@ -158,7 +167,7 @@ const Topmenu = () => {
                 <CiSearch onClick={toggleSearch} />
               </Nav.Link>
             )}
-
+              <div style={{fontSize:"10px"}}>{convertdata.email}</div>
             <Dropdown >
               <Dropdown.Toggle
                 as="div"
@@ -172,7 +181,7 @@ const Topmenu = () => {
                 <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Login</Dropdown.Item>
                 <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/register") }}>Register</Dropdown.Item>
 
-                <Dropdown.Item style={{ color: "green" }} onClick={() => { navigate("/login") }}>Logout</Dropdown.Item>
+                <Dropdown.Item style={{ color: "green" }} onClick={logout}>Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <div id='cardshoppingandlength'>

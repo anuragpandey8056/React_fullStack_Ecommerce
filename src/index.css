@@ -156,14 +156,13 @@ body {
 }
 #barsicon{
     color: #65ef87;
-    font-size: 30px;
+    font-size: larger;
     position: absolute;
     top: 2%;
     left: -1%;
     z-index: 9;
     display: none;
-    
-   
+
 }
 #bars{
     display: none;

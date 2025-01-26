@@ -16,9 +16,39 @@ import { MdPayment } from "react-icons/md";
 import { SlEarphonesAlt } from "react-icons/sl";
 import { MdHomeRepairService } from "react-icons/md";
 import { Row,Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+    const navigate=useNavigate();
     const [mydata, setmydata] = useState([]);
     const [hoverStates, setHoverStates] = useState({});
+
+    useEffect(() => {
+        // Check if the user is logged in
+        const isLoggedIn = window.localStorage.getItem("isLoggedIn");
+        // if (!isLoggedIn) {
+        //   alert("Please log in to access this page.");
+        //   navigate("/login");
+        // }
+    
+        // Prevent going back to the login page
+        const handlePopState = (event) => {
+          window.history.pushState(null, null, window.location.pathname);
+          alert("Navigation restricted!");
+        };
+    
+        window.history.pushState(null, null, window.location.pathname);
+        window.addEventListener("popstate", handlePopState);
+    
+        // Cleanup listener on unmount
+        return () => {
+          window.removeEventListener("popstate", handlePopState);
+        };
+      }, [navigate]);
+
+
+
+
     // timer
     const calculateTimeLeft = () => {
         const targetDate = new Date("2025-06-01T00:00:00"); // Fixed timestamp

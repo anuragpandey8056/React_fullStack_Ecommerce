@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import { IoIosHome } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
@@ -21,9 +22,13 @@ const Login = () => {
   const SubmitForm = () => {
     if (email === converteddata.email && password === converteddata.password) {
       alert("Login successful. Welcome!");
+      window.localStorage.setItem("isLoggedIn", true);
       navigate("/home");
-    } else {
-      alert("Incorrect password or email.");
+    }else  if(!localStorage.getItem("data")) {
+      alert("first register");
+    }
+    else{
+      alert('pass and email not matched')
     }
   };
 
@@ -36,6 +41,28 @@ const Login = () => {
     e.preventDefault();
     SubmitForm(); // Call SubmitForm when form is submitted
   };
+
+    useEffect(() => {
+          
+          if (window.localStorage.getItem("isLoggedIn")){
+            alert("You must be logged in")
+            navigate("/home")
+          }
+          const isLoggedIn = window.localStorage.getItem("isLoggedIn");
+         
+          const handlePopState = (event) => {
+            window.history.pushState(null, null, window.location.pathname);
+            alert("you are now logged in logout first");
+          };
+      
+          window.history.pushState(null, null, window.location.pathname);
+          window.addEventListener("popstate", handlePopState);
+      
+         
+          return () => {
+            window.removeEventListener("popstate", handlePopState);
+          };
+        }, [navigate]);
 
   return (
     <>

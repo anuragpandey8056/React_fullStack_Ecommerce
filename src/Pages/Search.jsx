@@ -114,7 +114,7 @@ const Search = () => {
     ));
 
     return (
-        <div id="searchboxshow" style={{ display: "grid", gridTemplateColumns: "repeat(3fr)", backgroundColor: "#1b1b1b" }}>
+        <div id="searchboxshow" style={{ display: "grid", gridTemplateColumns: "repeat(2, .5fr)", backgroundColor: "#1b1b1b" }}>
             {ans1} {/* Display the filtered product cards */}
         </div>
     );

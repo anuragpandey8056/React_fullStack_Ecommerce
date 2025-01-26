@@ -18,6 +18,7 @@ import Edit from "./Dashboard/Edit"
 import Dashhome from "./Dashboard/Dashhome"
 import Search from "./Pages/Search"
 import ProductDetail from "./Pages/ProductDetail"
+import Apidata from "./Pages/Apidata"
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
             <Route path="/dashboard/home" element={<Home />} />
             <Route path="/shop/productdetail/:id" element={<ProductDetail />} />
             <Route path="/search/productdetail/:id" element={<Search />} />
+            <Route path="apidata" element={<Apidata/>} />
+
 
 
 

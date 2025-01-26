@@ -4,6 +4,7 @@ import { Button } from "@material-tailwind/react";
 import Form from "react-bootstrap/Form";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -38,6 +39,33 @@ const Register = () => {
     SubmitForm();
     alert("Registration successful!");
   };
+
+  useEffect(() => {
+    // Check if the user is logged in
+    if (window.localStorage.getItem("isLoggedIn")){
+      alert("You are already logged in!");
+      navigate("/home")
+    }
+    const isLoggedIn = window.localStorage.getItem("isLoggedIn");
+    // if (!isLoggedIn) {
+    //   alert("Please log in to access this page.");
+    //   navigate("/login");
+    // }
+
+    // Prevent going back to the login page
+    const handlePopState = (event) => {
+      window.history.pushState(null, null, window.location.pathname);
+      alert("Navigation restricted!");
+    };
+
+    window.history.pushState(null, null, window.location.pathname);
+    window.addEventListener("popstate", handlePopState);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [navigate]);
 
   return (
     <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
