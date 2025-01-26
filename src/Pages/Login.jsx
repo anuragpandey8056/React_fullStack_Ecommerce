@@ -39,7 +39,7 @@ const Login = () => {
   // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    SubmitForm(); // Call SubmitForm when form is submitted
+    SubmitForm(); 
   };
 
     useEffect(() => {
@@ -91,9 +91,9 @@ const Login = () => {
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
             backdropFilter: "blur(-100px)",
-            background: "rgba(255, 255, 255, 0.2)", // Transparent background
-            width: "90%", // Default for mobile
-            maxWidth: "500px", // Limit width for larger screens
+            background: "rgba(255, 255, 255, 0.2)", 
+            width: "90%", 
+            maxWidth: "500px",
           }}
         >
           <Form
@@ -154,11 +154,7 @@ const Login = () => {
                 }}
               />
             </Form.Group>
-            {/* <div>
-            <a href=""><  li>Forget Password</li></a>
-            
-            <Link to="home"><li><IoIosHome style={{fontSize:"24px",color:"black",listStyleType:"none"}} /></li></Link>
-            </div> */}
+          
                                  
             
 

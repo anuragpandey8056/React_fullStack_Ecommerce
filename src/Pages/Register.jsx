@@ -41,18 +41,15 @@ const Register = () => {
   };
 
   useEffect(() => {
-    // Check if the user is logged in
+  
     if (window.localStorage.getItem("isLoggedIn")){
       alert("You are already logged in!");
       navigate("/home")
     }
     const isLoggedIn = window.localStorage.getItem("isLoggedIn");
-    // if (!isLoggedIn) {
-    //   alert("Please log in to access this page.");
-    //   navigate("/login");
-    // }
+   
 
-    // Prevent going back to the login page
+    
     const handlePopState = (event) => {
       window.history.pushState(null, null, window.location.pathname);
       alert("Navigation restricted!");
@@ -61,7 +58,7 @@ const Register = () => {
     window.history.pushState(null, null, window.location.pathname);
     window.addEventListener("popstate", handlePopState);
 
-    // Cleanup listener on unmount
+   
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
