@@ -56,7 +56,7 @@ const Topmenu = () => {
   const [jsonAdminData, setJsonAdminData] = useState([]);
 
   const data4=localStorage.getItem("data")
-  let convertdata=JSON.parse(data4)
+  // let convertdata=JSON.parse(data4)
   console.log(data4)
   const loadData = () => {
     let url = "https://react-jsonserver.onrender.com/AdminLogin";
@@ -167,7 +167,7 @@ const Topmenu = () => {
                 <CiSearch onClick={toggleSearch} />
               </Nav.Link>
             )}
-              <div style={{fontSize:"10px"}}>{convertdata.email}</div>
+          
             <Dropdown >
               <Dropdown.Toggle
                 as="div"
