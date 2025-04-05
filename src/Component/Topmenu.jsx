@@ -131,7 +131,6 @@ const Topmenu = () => {
             <Nav.Link as={Link} to="About" style={{ color: "white" }} id='nav'>About</Nav.Link>
             <Nav.Link as={Link} to="model" style={{ color: "white" }} id='nav'>Model</Nav.Link>
             <Nav.Link as={Link} to="contact" style={{ color: "white" }} id='nav'>Contact</Nav.Link>
-            <Nav.Link as={Link} to="apidata" style={{ color: "white" }} id='nav'>Apidata</Nav.Link>
 
           </Nav>
 

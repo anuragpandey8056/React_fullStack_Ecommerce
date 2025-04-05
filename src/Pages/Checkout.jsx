@@ -26,9 +26,9 @@ import axios from "axios";
 
 import { useNavigate, useParams } from "react-router-dom";
 import Cod from "./Cod";
-import InernetBanking from "./InternetBanking";
-import CreditDebit from "./creditDebit";
-import Upi from "./Upi";
+
+import Razorpay from "./Razorpay";
+
 
 
 
@@ -41,6 +41,7 @@ const Checkout = () => {
     const [productbuy, setproductbuy] = useState("")
     const [paymethod, setpaymethod] = useState("")
     const { amt } = useParams()
+    const [orderId, setOrderId] = useState(null);
     let img;
     let name, qnty;
     
@@ -49,18 +50,16 @@ const Checkout = () => {
         setpaymethod(e.target.value);
 
     }
+
+
+    
     let ans1;
     if (paymethod == "cash") {
         ans1 = <Cod />
     }
-    else if (paymethod == "internet") {
-        ans1 = <InernetBanking />
-    }
-    else if (paymethod == "debit") {
-        ans1 = <CreditDebit />
-    }
-    else if (paymethod == "upi") {
-        ans1 = <Upi />
+
+    else if (paymethod == "razorpay") {
+        ans1 = <Razorpay customerData={productbuy} />
     }
 
 
@@ -81,10 +80,9 @@ const Checkout = () => {
             image: img,
             productname: name,
             qnty: quantity,
-            ModofPayment:paymethod
+
+            ModofPayment: paymethod
         };
-
-
         let url = "https://react-jsonserver.onrender.com/OrderPlaced";
         axios.post(url, finalFormData).then((resp) => {
             console.log(resp)
@@ -256,36 +254,19 @@ const Checkout = () => {
                                                         />
                                                         Cash on Delivery
                                                     </label>
+                                              
+                                                   
+                                                   
                                                     <label className="d-flex align-items-center gap-2">
-                                                        <input
-                                                            type="radio"
-                                                            name="paymethod"
-                                                            value="internet"
-                                                            onChange={handlepay}
-                                                            className="form-check-input"
-                                                        />
-                                                        Internet Banking
-                                                    </label>
-                                                    <label className="d-flex align-items-center gap-2">
-                                                        <input
-                                                            type="radio"
-                                                            name="paymethod"
-                                                            value="debit"
-                                                            onChange={handlepay}
-                                                            className="form-check-input"
-                                                        />
-                                                        Debit/Credit Card
-                                                    </label>
-                                                    <label className="d-flex align-items-center gap-2">
-                                                        <input
-                                                            type="radio"
-                                                            name="paymethod"
-                                                            value="upi"
-                                                            onChange={handlepay}
-                                                            className="form-check-input"
-                                                        />
-                                                        UPI/Phone Pay
-                                                    </label>
+                                                    <input
+                                                        type="radio"
+                                                        name="paymethod"
+                                                        value="razorpay"
+                                                        onChange={handlepay}
+                                                        className="form-check-input"
+                                                    />
+                                                    Razorpay
+                                                </label>
                                                 </div>
                                                 
 
@@ -297,6 +278,8 @@ const Checkout = () => {
                                                 </div>
                                                 <div className="text-center">
                                                 <Button onClick={HandleSubmit} style={{  backgroundColor: "limegreen", color: "black",margin:"15px" }}> <center>Place order</center>  </Button>
+                
+
 
                                                 </div>
 

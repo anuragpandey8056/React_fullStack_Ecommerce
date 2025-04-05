@@ -25,10 +25,6 @@
       "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product1.jpg?v=1698049151&width=533"
     }
   ],
-
-
-
-
   "shop": [
     {
       "id": "1",
@@ -42,8 +38,8 @@
       "id": "2",
       "name": "Aqua shine smart",
       "price": 120000,
-      "description": "urban Commuting Evolution", 
-      "image":"https://greenshift-road.myshopify.com/cdn/shop/files/Product9.jpg?v=1698647979&width=533 ",
+      "description": "urban Commuting Evolution",
+      "image": "https://greenshift-road.myshopify.com/cdn/shop/files/Product9.jpg?v=1698647979&width=533 ",
       "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product9.1.jpg?v=1698647979&width=533"
     },
     {
@@ -151,9 +147,6 @@
       "hoverimage": "https://greenshift-road.myshopify.com/cdn/shop/files/Product19.1.jpg?v=1698661739&width=533"
     }
   ],
-
-
-
   "OrderPlaced": [
     {
       "id": "6158",
@@ -192,10 +185,6 @@
       "ModofPayment": "cash"
     }
   ],
-
-
-
-  
   "AdminLogin": [
     {
       "usename": "admin1",
@@ -216,6 +205,106 @@
       "usename": "admin4",
       "password": "1235",
       "id": "06ba"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order_1742720663411",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:04:23.411Z"
+    },
+    {
+      "id": "order_1742720700992",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:05:00.992Z"
+    },
+    {
+      "id": "order_1742720736076",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:05:36.076Z"
+    },
+    {
+      "id": "order_1742720753210",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:05:53.210Z"
+    },
+    {
+      "id": "order_1742720796935",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:06:36.935Z"
+    },
+    {
+      "id": "order_1742720935840",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:08:55.840Z"
+    },
+    {
+      "id": "order_1742721236276",
+      "amount": 17700000,
+      "currency": "INR",
+      "created_at": "2025-03-23T09:13:56.276Z"
+    },
+    {
+      "id": "order_1742721532247",
+      "amount": 17700000,
+      "currency": "INR",
+      "receipt": "rcpt_1742721532247",
+      "status": "created",
+      "created_at": "2025-03-23T09:18:52.247Z",
+      "notes": {}
+    },
+    {
+      "id": "order_1742721617567",
+      "amount": 17700000,
+      "currency": "INR",
+      "receipt": "rcpt_1742721617567",
+      "status": "created",
+      "created_at": "2025-03-23T09:20:17.567Z",
+      "notes": {}
+    },
+    {
+      "id": "order_1742722492014",
+      "amount": 53700000,
+      "currency": "INR",
+      "receipt": "rcpt_1742722492014",
+      "status": "created",
+      "created_at": "2025-03-23T09:34:52.014Z",
+      "notes": {}
+    },
+    {
+      "id": "order_1742806969883",
+      "amount": 5700000,
+      "currency": "INR",
+      "receipt": "rcpt_1742806969883",
+      "status": "created",
+      "created_at": "2025-03-24T09:02:49.883Z",
+      "notes": {}
+    }
+  ],
+  "payments": [
+    {
+      "id": "b61c",
+      "order_id": "order_1742721532247",
+      "payment_id": "pay_QABDRbkC95WYWc",
+      "amount": 17700000,
+      "status": "success",
+      "created_at": "2025-03-23T09:19:26.408Z",
+      "customer_details": {}
+    },
+    {
+      "id": "6e80",
+      "order_id": "order_1742806969883",
+      "payment_id": "pay_QAZTSwPpMuXVgF",
+      "amount": 5700000,
+      "status": "success",
+      "created_at": "2025-03-24T09:03:17.104Z",
+      "customer_details": {}
     }
   ]
 }

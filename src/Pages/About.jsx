@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 
 
 const About = () => {
-
+   
 
     const videoRef = useRef(null); // Reference to the video element
     const [isPlaying, setIsPlaying] = useState(false); // Track whether the video is playing
